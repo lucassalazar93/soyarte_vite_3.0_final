@@ -4,7 +4,7 @@ import { CarritoContext } from "../../context/CarritoContext";
 import { useNavigate } from "react-router-dom";
 import Recomendados from "./Recomendados";
 import BASE_URL from "../../BASE_URL";
-import "./carrito.css";
+import "./Carrito.css";
 
 const Carrito = () => {
   const {

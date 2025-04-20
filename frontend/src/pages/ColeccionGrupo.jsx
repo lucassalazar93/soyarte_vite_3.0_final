@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import BASE_URL from "../BASE_URL";
-import "./coleccionGrupo.css";
+import "./ColeccionGrupo.css";
 import { CarritoContext } from "../context/CarritoContext";
 import ToastNotificacion from "../components/UI/ToastNotificacion";
 import BannerGrupo from "../components/Tienda/BannerGrupo";

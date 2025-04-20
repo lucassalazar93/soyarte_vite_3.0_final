@@ -3,8 +3,5 @@
   command = "npm run build"
   publish = "frontend/dist"
 
-[functions]
-  directory = "netlify/functions"
-
 [build.environment]
   NODE_VERSION = "18"

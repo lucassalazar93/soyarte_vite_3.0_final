@@ -1,0 +1,104 @@
+.inspiring-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff0f6;
+    width: 100vw; /* 🔸 Ocupa el ancho completo */
+    margin-left: calc(-50vw + 50%); /* 🔸 Centrado sin margen lateral */
+  }
+  
+  .inspiring-section h2 {
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #c084fc;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .inspiring-section p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  /* 🟣 Grid armónico y centrado */
+  .inspiring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 🟣 Tarjetas animadas */
+  .inspiring-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.6s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .inspiring-card.visible {
+    transform: scale(1.02);
+    opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover */
+  .inspiring-card.visible:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(153, 102, 204, 0.3);
+    z-index: 2;
+  }
+  
+  .inspiring-card.visible:hover img {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiring-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Instagram */
+  .insta-name {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .checkmark {
+    color: #3897f0;
+    font-size: 1.2rem;
+    margin-left: 6px;
+  }
+  
+  .inspiring-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  .inspiring-card {
+    transition: transform 0.3s ease;
+  }
+  
+  

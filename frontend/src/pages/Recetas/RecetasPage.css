@@ -1,0 +1,86 @@
+/* 🌟 Secciones principales */
+.recetas-destacadas,
+.super-delicias {
+  text-align: center;
+  margin: 60px 0;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, #fff0f6, #fdf4ff);
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.08);
+}
+
+/* 🔍 Buscador */
+.busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.busqueda input {
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.busqueda .search-btn {
+  background: #9333ea;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.busqueda .search-btn:hover {
+  background: #7e22ce;
+}
+
+.busqueda .search-btn img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+}
+
+/* ❌ Error */
+.error {
+  color: #dc2626;
+  font-weight: bold;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+
+.recetario-boton-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.boton-recetario {
+  background: #7c3aed;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+  transition: 0.3s ease;
+}
+
+.boton-recetario:hover {
+  background: #6b21a8;
+}
+

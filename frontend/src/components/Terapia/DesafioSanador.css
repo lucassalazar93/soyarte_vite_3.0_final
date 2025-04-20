@@ -1,0 +1,157 @@
+/* === DesafioSanador.css === */
+
+.desafio-sanador {
+    background: #fdf4ff;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 4rem auto;
+    max-width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+  
+  .titulo-desafio {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #9333ea;
+    margin-bottom: 0.4rem;
+  }
+  
+  .subtitulo-desafio {
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 2.5rem;
+  }
+  
+  .tarjeta-desafio {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(148, 112, 255, 0.08);
+    margin: 0 auto 2rem;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .tarjeta-desafio h3 {
+    color: #7e22ce;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .tarjeta-desafio p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .icono-desafio {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: popIn 1s ease;
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  button {
+    margin-top: 1.5rem;
+    background-color: #c084fc;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  button:hover {
+    background-color: #a855f7;
+  }
+  
+  .completado-texto {
+    margin-top: 1.5rem;
+    color: #7e22ce;
+    background-color: #f3e8ff;
+    padding: 12px 18px;
+    border-radius: 1rem;
+    font-style: italic;
+    font-size: 0.95rem;
+    animation: confeti 1s ease;
+  }
+  
+  @keyframes confeti {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  textarea {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+    resize: vertical;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .frase-inspiradora {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-top: 2.5rem;
+  }
+  
+  .galeria-retos {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  
+  .galeria-retos h4 {
+    font-size: 1.2rem;
+    color: #7e22ce;
+    margin-bottom: 0.8rem;
+  }
+  
+  .iconos-retos span {
+    font-size: 1.8rem;
+    margin: 0 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .iconos-retos span:hover {
+    transform: scale(1.2);
+  }

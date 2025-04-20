@@ -1,0 +1,13 @@
+# Ignorar dependencias pesadas
+node_modules
+backend/node_modules
+
+# Ignorar archivos de construcción
+dist
+build
+
+# Archivos locales
+.env
+.DS_Store
+.vscode
+*.log

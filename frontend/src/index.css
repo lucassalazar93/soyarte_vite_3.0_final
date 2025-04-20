@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* 🌍 Configuración general del sitio */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fffdfc;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🧾 Tipografías por jerarquía */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #5b21b6;
+}
+
+p, span, button, input, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 🎨 Colores base */
+:root {
+  --color-primario: #7c3aed;
+  --color-secundario: #f9a8d4;
+  --color-fondo: #fff0f6;
+  --color-texto: #333;
+  --color-boton: linear-gradient(to right, #f472b6, #c084fc);
+}
+
+/* 🔘 Botones generales */
+button, .btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(124, 58, 237, 0.2);
+}
+
+/* 🖼️ Imágenes fluidas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 📱 Responsive básico */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+body.modal-abierto {
+  overflow: hidden;
+}

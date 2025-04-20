@@ -1,0 +1,132 @@
+/* 🎨 Contenedor principal del carrusel */
+.hero-carrusel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #ffe6f7;
+  }
+  
+  /* 🖼 Cada slide */
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  /* 🌸 Texto dentro del carrusel */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 40%;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    animation: fadeInText 1.2s ease;
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(-60%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+  
+  .hero-text h2 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+    color: #fff0ff;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  /* ✨ Botón CTA */
+  .hero-text button {
+    background: #ff66c4;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s;
+  }
+  
+  .hero-text button:hover {
+    background: #e94cab;
+  }
+  
+  /* 🔘 Puntos de navegación */
+  .hero-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+  }
+  
+  .hero-dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .hero-dot.active,
+  .hero-dot:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    background: #ff71c5;
+  }
+  
+  /* 📱 Responsive para móvil */
+  @media (max-width: 768px) {
+    .hero-text {
+      max-width: 90%;
+      left: 5%;
+      text-align: center;
+      transform: translateY(-40%);
+    }
+  
+    .hero-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .hero-text button {
+      font-size: 0.9rem;
+    }
+  }
+  

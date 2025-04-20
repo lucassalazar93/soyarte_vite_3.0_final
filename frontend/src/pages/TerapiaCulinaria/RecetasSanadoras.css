@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;600&display=swap');
+
+.sanadoras-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #fffafc, #fdf4fb);
+  text-align: center;
+}
+
+/* Tipografía elegante */
+.seccion-alma h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #8f42ec;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-alma p,
+.seccion-alma li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.seccion-alma .frase-destacada {
+  font-style: italic;
+  font-weight: 600;
+  color: #6a4dad;
+}
+
+.seccion-alma .sutil {
+  opacity: 0.8;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+/* Animación fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.galeria-recetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.tarjeta-receta {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.tarjeta-receta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-receta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-receta h3 {
+  color: #9333ea;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.etiquetas {
+  font-size: 0.95rem;
+  color: #9333ea;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.boton-receta {
+  display: inline-block;
+  background: #c084fc;
+  color: white;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.boton-receta:hover {
+  background: #ff66cc;
+}
+
+@media (max-width: 768px) {
+  .galeria-recetas {
+    flex-direction: column;
+    align-items: center;
+  }
+}

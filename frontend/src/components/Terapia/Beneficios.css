@@ -1,0 +1,82 @@
+.beneficios-wrapper {
+    background: linear-gradient(to bottom right, #fff1f2, #fdf2f8);
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+  }
+  
+  .beneficios-title {
+    text-align: center;
+    font-weight: 700;
+    color: #7c3aed;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .beneficios-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .beneficios-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .beneficio-card {
+    background: #fff;
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .beneficio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .icono-beneficio span {
+    font-size: 2.5rem;
+    background: #f3e8ff;
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .titulo-beneficio {
+    color: #9333ea;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .descripcion-beneficio {
+    color: #4b5563;
+    font-size: 1rem;
+  }
+  
+  .frase-final {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .beneficios-container {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+  }
+  

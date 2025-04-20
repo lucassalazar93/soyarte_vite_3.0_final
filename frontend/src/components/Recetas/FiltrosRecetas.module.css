@@ -1,0 +1,145 @@
+.filtrosContainer {
+    background: #fdf4ff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(180, 140, 210, 0.2);
+    margin: 40px auto;
+    max-width: 1100px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .titulo {
+    font-family: 'Playfair Display', serif;
+    color: #6a359c;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .microcopy {
+    color: #7a5c9d;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .filtrosGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .inputGroup {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(160, 130, 190, 0.1);
+    flex: 1 1 220px;
+    min-width: 200px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .inputGroup:hover {
+    box-shadow: 0 2px 12px rgba(130, 100, 170, 0.2);
+  }
+  
+  .inputGroup span {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    color: #c084fc;
+  }
+  
+  .inputGroup input,
+  .inputGroup select {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    flex: 1;
+    background: transparent;
+    color: #4b2e57;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .btnLimpiar,
+  .btnSorpresa {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btnLimpiar {
+    background: linear-gradient(to right, #f9d3ec, #e3c3fa);
+    color: #6a359c;
+  }
+  
+  .btnSorpresa {
+    background: #d8b4f8;
+    color: white;
+    box-shadow: 0 0 12px rgba(220, 140, 255, 0.4);
+  }
+  
+  .btnSorpresa:hover {
+    animation: bounce 0.4s ease;
+    box-shadow: 0 0 18px rgba(220, 140, 255, 0.7);
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .filtrosGrid {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .inputGroup {
+      min-width: unset;
+    }
+  
+    .botones {
+      flex-direction: column;
+    }
+  }
+
+  .vajillaFlotante {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.4rem;
+    animation: flotarVajilla 2.8s ease-in-out infinite;
+    transform-origin: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  /* Animación de flotación con rebote */
+  @keyframes flotarVajilla {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+    50% { transform: translateY(-8px) rotate(-10deg); opacity: 1; }
+    100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+  }
+  
+  /* Mostrar vajilla al pasar el cursor por el botón */
+  .btnSorpresa:hover .vajillaFlotante {
+    opacity: 1;
+    animation-play-state: running;
+  }
+  
+  

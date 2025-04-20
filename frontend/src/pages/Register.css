@@ -1,0 +1,218 @@
+/* 🌌 CONTENEDOR GENERAL */
+.register-container {
+    display: flex;
+    height: 100vh; /* Altura completa de la pantalla */
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* 🌸 PANEL IZQUIERDO CON IMAGEN DE FONDO */
+  .register-left {
+    flex: 1;
+    background: url('/images/mujer-flor-loto.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 🧾 CUADRO DE BIENVENIDA SOBRE LA IMAGEN */
+  .welcome-box {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    max-width: 80%;
+    color: #3e245a;
+    animation: fadeIn 1s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .welcome-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #5c2674;
+  }
+  
+  .welcome-box p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #4f2e6f;
+  }
+  
+  .welcome-box span {
+    font-weight: bold;
+    color: #a267e7;
+  }
+  
+  /* 🧘 PANEL DERECHO CON FORMULARIO */
+  .register-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #35173d;
+    padding: 2rem;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  
+  /* 📦 CAJA DEL FORMULARIO */
+  .form-box {
+    background: #f5ecfa;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2rem;
+    width: 100%;
+    max-width: 460px;
+    animation: fadeIn 0.8s ease;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+  
+  .form-box h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #5d3574;
+  }
+  
+  .saludo-form {
+    text-align: center;
+    color: #8d6caf;
+    font-style: italic;
+    margin: 1rem 0;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #efe0ff;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+  
+  .input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .dob-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dob-row input {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    border: none;
+    background: #f3e8ff;
+    font-size: 1rem;
+  }
+  
+  .role-select {
+    border: none;
+    border-radius: 30px;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    background: #f3e8ff;
+    margin-bottom: 1rem;
+  }
+  
+  .register-button {
+    background: linear-gradient(90deg, #a267e7, #c679ff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .register-button:hover {
+    box-shadow: 0 6px 20px rgba(162, 103, 231, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .login-link,
+  .guest-access {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: #5d3574;
+  }
+  
+  .invitada-link {
+    background: #fbd0ff;
+    color: #4c146c;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  .invitada-link:hover {
+    background: #d8a6f2;
+    color: white;
+  }
+  
+  .mini-historia,
+  .ritual-phrase {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #5f3b84;
+    text-align: center;
+  }
+  
+  .mini-historia strong,
+  .ritual-phrase strong {
+    color: #a94ae4;
+  }
+  
+  /* 🌬️ ANIMACIÓN DE ENTRADA */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 📱 RESPONSIVE PARA MÓVIL */
+  @media (max-width: 768px) {
+    .register-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .register-left {
+      display: none; /* Oculta imagen en móviles */
+    }
+  
+    .register-right {
+      flex: none;
+      height: auto;
+      padding: 2rem 1rem;
+    }
+  
+    .form-box {
+      max-height: none;
+      padding: 2rem 1rem;
+    }
+  }
+  

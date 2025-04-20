@@ -1,0 +1,38 @@
+.ingrediente-input-wrapper {
+    background: #fff0f8;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .input-group button {
+    background: #d946ef;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .ingrediente-lista li {
+    display: flex;
+    justify-content: space-between;
+    background: #ffe2f3;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    border-radius: 6px;
+  }
+  

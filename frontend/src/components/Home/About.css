@@ -1,0 +1,122 @@
+/* 🌸 Contenedor general */
+.about-wrapper {
+    background-color: #f9f5f8;
+    padding: 4rem 1rem;
+    width: 100%;
+  }
+  
+  /* 🌷 Animación */
+  .about-section {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* 🎞️ Marco tipo video */
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 4px solid #eecff9;
+    border-radius: 1.5rem;
+    padding: 0;
+    background: transparent;
+    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* ✨ Ícono decorativo */
+  .about-container::before {
+    content: "✨";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 1.5rem;
+    color: #c084fc;
+    z-index: 2;
+  }
+  
+  /* 🖼️ Imagen con brillo suave */
+  .about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    filter: brightness(0.6);
+  }
+  
+  /* 💬 Texto sobre la imagen */
+  .about-text {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.181);
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    color: #fff;
+    max-width: 90%;
+    width: 700px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🎀 Título */
+  .about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #c084fc;
+    margin-bottom: 1rem;
+  }
+  
+  /* 📜 Párrafo */
+  .about-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 💜 Botón Conócenos */
+  .about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c084fc;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.3);
+  }
+  
+  .about-button:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 102, 204, 0.3);
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .about-text {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    .about-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  
+    .about-button {
+      font-size: 0.95rem;
+      padding: 10px 20px;
+    }
+  }
+  

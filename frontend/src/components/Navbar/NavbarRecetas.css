@@ -1,0 +1,150 @@
+/* 🌸 Navbar Recetas Estilo Tienda */
+.navbar-recetas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fce3f4;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ecb2e5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+  }
+  
+  .bloque-izquierdo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .btn-hamburguesa {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #8b008b;
+    cursor: pointer;
+  }
+  .logo-recetas {
+    height: 48px;
+    transition: transform 0.2s ease;
+  }
+  .logo-recetas:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🔍 Buscador */
+  .bloque-buscador {
+    flex: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    background-color: #fff;
+    border: 2px solid #e3b0ff;
+    border-radius: 40px;
+    padding: 0.5rem 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  .icono-busqueda {
+    color: #888;
+    margin-right: 0.6rem;
+    font-size: 1rem;
+  }
+  .input-busqueda {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+  }
+  
+  /* 🎯 Botones derechos */
+  .bloque-derecho {
+    display: flex;
+    gap: 1rem;
+  }
+  .btn-receta {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #7b2cbf;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .btn-receta:hover {
+    color: #a633c4;
+  }
+  .btn-entrar {
+    background-color: #af7ac5;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+  }
+  
+  /* 🍽️ Menú lateral */
+  .menu-lateral-recetas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff0fa;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-lateral-recetas a {
+    text-decoration: none;
+    color: #800080;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .encabezado-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .cerrar-menu {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #b5179e;
+    cursor: pointer;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .navbar-recetas {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 1.2rem;
+    }
+  
+    .bloque-buscador {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  
+    .bloque-derecho {
+      justify-content: center;
+      margin-top: 0.8rem;
+    }
+  }
+  

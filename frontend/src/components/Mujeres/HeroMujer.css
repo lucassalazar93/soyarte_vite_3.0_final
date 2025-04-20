@@ -1,0 +1,115 @@
+/* 🌸 Estilo general del hero */
+.hero-mujer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #fbeaff 0%, #fef6ff 100%);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(192, 132, 252, 0.2);
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* 📸 Imagen lado izquierdo */
+  .hero-left {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-left img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 2rem;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.4);
+    transition: transform 0.4s ease;
+  }
+  
+  .hero-left img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ✨ Texto lado derecho */
+  .hero-right {
+    flex: 1;
+    max-width: 50%;
+    color: #4b2e57;
+  }
+  
+  .hero-right h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #bb6bd9;
+    animation: slideDown 0.8s ease-out;
+  }
+  
+  .hero-right .cita {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .hero-right .info {
+    font-size: 1rem;
+    color: #7c4d9c;
+    margin-bottom: 1rem;
+  }
+  
+  /* 🔙 Botón de regreso */
+  .volver-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: #bb6bd9;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 6px 18px rgba(192, 132, 252, 0.3);
+    transition: background 0.3s ease;
+  }
+  
+  .volver-btn:hover {
+    background-color: #da8efb;
+  }
+  
+  /* 🎬 Animaciones suaves */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .hero-mujer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-left, .hero-right {
+      max-width: 100%;
+    }
+  
+    .hero-right h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-left img {
+      width: 90%;
+    }
+  }
+  

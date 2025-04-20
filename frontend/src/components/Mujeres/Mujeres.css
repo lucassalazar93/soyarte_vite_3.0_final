@@ -1,0 +1,464 @@
+/* Mujeres.css */
+.mujeres-section {
+    background: #fef6fb;
+    padding: 4rem 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mujeres-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #c084fc;
+    margin-bottom: 1rem;
+}
+
+.mujeres-hero p {
+    font-size: 1.1rem;
+    color: #4b2e57;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.mujeres-slider {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mujer-slide {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(192, 132, 252, 0.2);
+}
+
+.mujer-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mujer-content {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    color: #fff;
+    padding: 2rem;
+    width: 100%;
+    text-align: left;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.mujer-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #f3c2ff;
+}
+
+.mujer-content .frase {
+    font-style: italic;
+    color: #e9b3ff;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Dots del carrusel */
+.slick-dots li button:before {
+    color: #c084fc;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff66cc;
+}
+
+.btn-ver-historia {
+    margin-top: 1.5rem;
+    padding: 12px 26px;
+    background-color: #c084fc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.4);
+}
+
+.btn-ver-historia:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+}
+
+/* 🎀 Galería de tarjetas */
+.mujeres-galeria {
+    margin-top: 4rem;
+}
+
+.galeria-title {
+    font-size: 2rem;
+    color: #b463f0;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 0.5rem;
+}
+
+.galeria-sub {
+    color: #4b2e57;
+    margin-bottom: 2rem;
+}
+
+/* 📸 Tarjetas en grilla */
+.mujeres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.mujer-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(192, 132, 252, 0.1);
+    text-decoration: none;
+    color: #4b2e57;
+    transition: transform 0.3s ease;
+}
+
+.mujer-card:hover {
+    transform: translateY(-5px);
+}
+
+.mujer-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mujer-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #b463f0;
+}
+
+.mujer-card .frase {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.mujer-card .resumen {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.mujer-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.mujer-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 1rem;
+}
+
+.mujer-img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(192, 132, 252, 0.2);
+    /* violeta suave */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+}
+
+.mujer-card:hover .mujer-img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.mujer-card:hover .mujer-img-wrapper::after {
+    opacity: 1;
+}
+
+.btn-ver-historia-mini {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    background-color: #c084fc;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-historia-mini:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+}
+
+
+.formulario-participacion {
+    background: #fff0f6;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    margin: 4rem auto 2rem;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(192, 132, 252, 0.2);
+}
+
+.formulario-participacion h2 {
+    font-size: 2rem;
+    color: #c084fc;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1rem;
+}
+
+.formulario-participacion p {
+    font-size: 1rem;
+    color: #4b2e57;
+    margin-bottom: 2rem;
+}
+
+.formulario-participacion input,
+.formulario-participacion textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn-enviar {
+    background-color: #c084fc;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.3);
+}
+
+.btn-enviar:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+}
+
+
+.hashtag-boton {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hashtag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(to right, #c084fc, #ff66cc);
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 6px 16px rgba(192, 132, 252, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hashtag-link:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff66cc, #c084fc);
+}
+
+.icono-rebote {
+    width: 24px;
+    height: 24px;
+    animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.bloque-reflexion {
+    background: #fff0f6;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    margin: 4rem auto 2rem;
+    max-width: 900px;
+    box-shadow: 0 6px 20px rgba(192, 132, 252, 0.1);
+}
+
+.frase-final {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4b2e57;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-rosa {
+    background: #c084fc;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.3);
+    display: inline-block;
+}
+
+.btn-rosa:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+}
+
+
+/* Estilos para MujerDetalle.jsx */
+
+.mujer-detalle {
+    background-color: #fef6fb;
+    font-family: "Poppins", sans-serif;
+    color: #4b2e57;
+}
+
+/* Hero visual emocional */
+.mujer-detalle-hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mujer-overlay {
+    background: rgba(122, 57, 139, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* ✅ soporte Safari */
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(192, 132, 252, 0.3);
+}
+
+
+.mujer-overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mujer-overlay blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #fce4ec;
+    margin: 0;
+}
+
+.mujer-detalle-contenido {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.historia {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.video-testimonio {
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logros {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logros img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.2);
+}
+
+.impacto {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #b463f0;
+    margin-bottom: 2rem;
+}
+
+.btn-rosa {
+    background: #c084fc;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.3);
+    display: inline-block;
+}
+
+.btn-rosa:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+}

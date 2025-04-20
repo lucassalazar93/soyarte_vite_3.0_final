@@ -1,0 +1,172 @@
+/* src/css/carrito.css */
+body {
+  background: linear-gradient(to bottom, #fff0f6, #fbe8ff);
+  font-family: 'Quicksand', sans-serif;
+  color: #4b2e57;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.hero-carrito {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #fddde6, #e9d5f1);
+  border-radius: 0 0 2rem 2rem;
+}
+.hero-carrito h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #532a70;
+  margin-bottom: 0.5rem;
+}
+.hero-carrito p {
+  font-size: 1.2rem;
+  color: #824ea8;
+}
+
+.productos-carrito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card-producto {
+  background: linear-gradient(to bottom right, #ffeaf7, #f9e6fc);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.card-producto:hover {
+  transform: scale(1.02);
+}
+.card-producto img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #f7c6eb;
+}
+.card-producto h2 {
+  font-size: 1.2rem;
+  color: #5c2d91;
+}
+.card-producto .descripcion {
+  font-size: 0.95rem;
+  color: #6c2a75;
+}
+.card-producto .precio span {
+  color: #e63976;
+}
+.card-producto .total {
+  font-weight: bold;
+  margin-top: 0.8rem;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+.acciones button {
+  background: #ffe0f6;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #b42d6d;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.acciones button:hover {
+  transform: scale(1.1);
+}
+.acciones .trash {
+  font-size: 1.2rem;
+}
+
+.checkout-info {
+  background: linear-gradient(to right, #fbeaff, #fce8f3);
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+.checkout-info h2 {
+  font-size: 1.6rem;
+  color: #e63976;
+  margin-bottom: 1rem;
+}
+.checkout-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.checkout-info li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.acciones-checkout {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.btn-vaciar,
+.btn-finalizar {
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+.btn-vaciar {
+  background: linear-gradient(to right, #f67c9b, #e262aa);
+  color: white;
+}
+.btn-finalizar {
+  background: linear-gradient(to right, #bb77e2, #f17ed9);
+  color: white;
+  box-shadow: 0 8px 20px rgba(217, 143, 255, 0.4);
+}
+.btn-finalizar:hover {
+  transform: translateY(-3px);
+}
+
+.recomendados {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.recomendados h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #4b2e57;
+  margin-bottom: 1rem;
+}
+.productos-recomendados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.productos-recomendados .card {
+  background: #fde8f0;
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+.productos-recomendados .card:hover {
+  transform: translateY(-4px);
+}

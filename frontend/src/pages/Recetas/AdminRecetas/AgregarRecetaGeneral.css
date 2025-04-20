@@ -1,0 +1,61 @@
+.agregar-receta-general {
+    max-width: 720px;
+    margin: 3rem auto;
+    background: #f9f5f8;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .agregar-receta-general h2 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    color: #5b21b6;
+    margin-bottom: 2rem;
+  }
+  
+  .formulario-general label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .formulario-general input,
+  .formulario-general textarea,
+  .formulario-general select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    background-color: #fff;
+  }
+  
+  .formulario-general textarea {
+    min-height: 100px;
+  }
+  
+  .btn-general-guardar {
+    margin-top: 2rem;
+    background-color: #7c3aed;
+    color: white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-general-guardar:hover {
+    background-color: #6b21a8;
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(124, 58, 237, 0.25);
+  }
+  

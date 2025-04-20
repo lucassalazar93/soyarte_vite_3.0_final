@@ -1,0 +1,87 @@
+/* 🎠 Contenedor principal del carrusel */
+.carousel-home {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Aumentamos un poco la altura para mayor impacto */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 🎞️ Estilos para cada slide */
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* ✅ Muestra solo el slide activo */
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  /* 📸 Ajusta la imagen con bordes redondeados y sombra */
+  .carousel-slide img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px; /* 🔹 Bordes redondeados */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* 🔹 Sombra suave */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+  
+  /* 🚀 Efecto hover en la imagen */
+  .carousel-slide img:hover {
+    transform: scale(1.05); /* 🔹 Zoom sutil */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 🔤 Texto sobre la imagen */
+  .carousel-text {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* 🔹 Más transparencia */
+    padding: 12px 25px;
+    border-radius: 10px; /* 🔹 Bordes más suaves */
+    text-align: left;
+    -webkit-backdrop-filter: blur(5px); /* 🔹 Soporte para Safari */
+    backdrop-filter: blur(5px); /* 🔹 Efecto moderno */
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* ✅ Cambio de color al pasar el cursor */
+  .carousel-text:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* 📌 Texto */
+  .carousel-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* 🔘 Botón dentro del carrusel */
+  .carousel-button {
+    display: inline-block;
+    background: #a100ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(161, 0, 255, 0.3); /* 🔹 Sombra */
+  }
+  
+  /* 🟣 Efecto hover en botón */
+  .carousel-button:hover {
+    background: #8500d2;
+    transform: scale(1.08);
+    box-shadow: 0px 6px 15px rgba(161, 0, 255, 0.5);
+  }
+  

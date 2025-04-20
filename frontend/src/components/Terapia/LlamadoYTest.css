@@ -1,0 +1,158 @@
+.seccion-final-terapia {
+    padding: 3rem 1.5rem;
+    background: #fff0f6;
+    border-radius: 2rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* 🧠 TEST EMOCIONAL */
+  .test-emocional {
+    background: #fef6fb;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 20px rgba(240, 165, 219, 0.2);
+  }
+  
+  .test-emocional h3 {
+    font-family: "Playfair Display", serif;
+    color: #9333ea;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .test-emocional select {
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #d8b4fe;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .test-emocional .recomendacion {
+    font-weight: 600;
+    font-style: italic;
+    color: #6b21a8;
+    margin: 1rem 0;
+  }
+  
+  .test-emocional .frase-cierre,
+  .test-emocional .agradecimiento {
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  
+  /* ✨ LLAMADO A COMPARTIR */
+  .llamado-compartir {
+    background: #fff7fb;
+    border-top: 2px dashed #f9d3f9;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+  }
+  
+  .llamado-compartir h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #be185d;
+    margin-bottom: 1rem;
+  }
+  
+  .llamado-compartir p,
+  .llamado-compartir ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .llamado-compartir strong {
+    color: #9333ea;
+  }
+  
+  /* CONTENEDOR DE BOTONES */
+  .botones-compartir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  /* BOTONES GENERALES */
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+  }
+  
+  /* REDES: ESTILO REDONDO Y UNIFICADO */
+  .redes-sociales .share-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+  }
+  
+  .share-btn svg {
+    pointer-events: none;
+  }
+  
+  /* COLORES PERSONALIZADOS */
+  .share-btn.x { background-color: #000; }
+  .share-btn.facebook { background-color: #3b5998; }
+  .share-btn.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  .share-btn.whatsapp { background-color: #25d366; }
+  .share-btn.tiktok { background-color: #010101; }
+  
+  /* COPIAR ENLACE: SEPARADO ABAJO */
+  .share-btn.copy {
+    background-color: #a78bfa;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .share-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .llamado-compartir .frase-cierre {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .redes-sociales {
+      gap: 0.7rem;
+    }
+  
+    .share-btn.copy {
+      margin-top: 1rem;
+    }
+  }
+  

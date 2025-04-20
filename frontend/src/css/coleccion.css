@@ -1,0 +1,151 @@
+.coleccion-container {
+    padding: 3rem 1rem;
+    background: #fff0f6;
+    text-align: center;
+    min-height: 100vh;
+    color: #5b2b6d;
+  }
+  
+  .coleccion-titulo {
+    font-size: 2.8rem;
+    font-family: "Playfair Display", serif;
+    color: #b02675;
+    margin-bottom: 1rem;
+  }
+  
+  .coleccion-descripcion {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #713d8f;
+  }
+  
+  /* GALERÍA IMPONENTE */
+  .galeria-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+  
+  .tarjeta-producto {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 270px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .tarjeta-producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(174, 59, 131, 0.25);
+  }
+  
+  .tarjeta-producto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #f4c2d7;
+    transition: transform 0.3s ease;
+  }
+  
+  .tarjeta-producto:hover img {
+    transform: scale(1.02);
+  }
+  
+  .nombre-prenda {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #722c7e;
+    font-family: "Poppins", sans-serif;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Descripción plegable */
+  .descripcion-prenda {
+    font-size: 0.95rem;
+    color: #6b3b6f;
+    margin: 0.4rem 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    max-height: 4rem;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease;
+  }
+  
+  .tarjeta-producto:hover .descripcion-prenda {
+    max-height: 14rem;
+  }
+  
+  .precio-prenda {
+    font-size: 1rem;
+    color: #a8327e;
+    font-weight: 600;
+    margin: 0.6rem 0 0.2rem;
+  }
+  
+  .boton-carrito {
+    background: linear-gradient(to right, #e07bbf, #c468c0);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+    margin: 1rem auto;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .boton-carrito:hover {
+    background: linear-gradient(to right, #c468c0, #e07bbf);
+  }
+  
+  /* BOTÓN VOLVER */
+  .volver-tienda {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #b02675;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+  
+  .volver-tienda:hover {
+    color: #8e1e63;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1100px) {
+    .galeria-imagenes {
+      flex-wrap: wrap;
+    }
+  
+    .tarjeta-producto {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .galeria-imagenes {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tarjeta-producto {
+      width: 90%;
+    }
+  }
+  

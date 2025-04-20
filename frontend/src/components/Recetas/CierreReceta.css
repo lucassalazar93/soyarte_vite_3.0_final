@@ -1,0 +1,172 @@
+.cierre-receta {
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background-color: #fff0f6;
+  border-radius: 1.5rem;
+  max-width: 900px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.cierre-receta h2,
+.cierre-receta h3 {
+  color: #9333ea;
+  margin-bottom: 1rem;
+}
+
+.cierre-receta p {
+  margin-bottom: 1.2rem;
+}
+
+.acciones-finales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.accion-guardar,
+.accion-cocinada,
+.btn-enviar-experiencia,
+.btn-libro {
+  background-color: #9333ea;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.accion-guardar:hover,
+.btn-enviar-experiencia:hover,
+.accion-cocinada:hover,
+.btn-libro:hover {
+  background-color: #a855f7;
+  transform: translateY(-2px);
+}
+
+.estrellas {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.estrella {
+  cursor: pointer;
+  color: #d1d5db;
+  transition: color 0.2s ease;
+}
+
+.estrella.activa {
+  color: gold;
+}
+
+.comentario-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+  resize: none;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.subir-foto {
+  display: block;
+  margin: 1.5rem auto 1rem;
+  font-weight: 600;
+  color: #4b0082;
+  cursor: pointer;
+}
+
+.subir-foto input {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.preview-foto {
+  max-width: 100%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.preview-texto {
+  font-weight: 500;
+  color: #6b21a8;
+}
+
+.gracias {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.icono-check {
+  color: green;
+  font-size: 1.2rem;
+}
+
+/* Redes sociales */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem auto;
+  flex-wrap: wrap;
+}
+
+.social-buttons a {
+  background-color: #9333ea;
+  color: white;
+  font-size: 1.3rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.social-buttons a:hover {
+  background-color: #7e22ce;
+  transform: scale(1.1);
+}
+
+.mensaje-copiable {
+  font-style: italic;
+  color: #4b0082;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .cierre-receta {
+    padding: 1.5rem 1rem;
+  }
+
+  .acciones-finales button,
+  .btn-enviar-experiencia,
+  .btn-libro {
+    width: 100%;
+    justify-content: center;
+  }
+}

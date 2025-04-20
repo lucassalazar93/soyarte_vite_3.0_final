@@ -1,0 +1,31 @@
+.categorias-destacadas {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .categorias-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-top: 1.5rem;
+  }
+  
+  .categoria-card {
+    background: #fce7f3;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: #6b21a8;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .categoria-card:hover {
+    transform: translateY(-4px);
+    background: #fbcfe8;
+  }
+  
+  .categoria-card .emoji {
+    font-size: 2rem;
+  }
+  

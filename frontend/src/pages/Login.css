@@ -1,0 +1,185 @@
+/* ✨ Estructura general */
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* 🌸 Panel izquierdo con imagen */
+.left-panel {
+  flex: 1;
+  background: url('/images/fondo-login.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* 💜 Cuadro sobre la imagen */
+.welcome-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  max-width: 80%;
+}
+
+.welcome-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #5f3086;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-box p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #623f91;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-box span {
+  color: #a94ae4;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 🎨 Panel derecho con formulario */
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #35173d;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* 🧊 Caja del formulario */
+.form-login {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+.form-login h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #5d3574;
+  margin-bottom: 1rem;
+}
+
+/* Campos */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f3e8ff;
+  padding: 0.8rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Botón */
+.login-button {
+  background: linear-gradient(90deg, #a267e7, #c679ff);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  box-shadow: 0 6px 20px rgba(162, 103, 231, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Errores */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Opciones debajo del botón */
+.login-options {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #5d3574;
+}
+
+.login-options span {
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.invitada-link {
+  background: #fbd0ff;
+  color: #4c146c;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.invitada-link:hover {
+  background: #d8a6f2;
+  color: white;
+}
+
+/* ✨ Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Móvil */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    flex: none;
+    padding: 2rem 1rem;
+    background: #f9f4fb;
+  }
+}

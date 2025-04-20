@@ -1,0 +1,61 @@
+/* 🎀 BeneficiosBar - barra horizontal elegante debajo del hero */
+
+.beneficios-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(228, 206, 255, 0.2);
+    margin: 2rem auto;
+    max-width: 1100px;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+  }
+  
+  .beneficio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #7b3fa1;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .beneficio i {
+    color: #c78bd6;
+    font-size: 1.2rem;
+  }
+  
+  /* Separador vertical entre beneficios */
+  .beneficio:not(:last-child) {
+    border-right: 1px solid #eee;
+  }
+  
+  /* 💜 Hover suave */
+  .beneficio:hover {
+    color: #a94ae4;
+    transform: translateY(-2px);
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .beneficios-bar {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+    }
+  
+    .beneficio {
+      border-right: none;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+  

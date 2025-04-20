@@ -1,0 +1,105 @@
+/* 🌌 SPLASH SCREEN */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #2b0644 0%, #501f77 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 1.5s ease;
+  }
+  
+  /* Estado fade-out */
+  .splash-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Logo protagonista */
+  .logo-splash {
+    width: 220px;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: growIn 2.5s ease-out forwards, pulse 4s ease-in-out infinite 2.5s;
+    filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.4));
+  }
+  
+  /* Texto más separado y grande */
+  .splash-tagline {
+    margin-top: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    color: #ffffff;
+    text-align: center;
+    animation: fadeInText 2.2s ease 1.5s forwards;
+    opacity: 0;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animaciones */
+  @keyframes growIn {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1.24);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      transform: translateY(15px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logo-splash {
+      width: 65%;
+    }
+  
+    .splash-tagline {
+      font-size: 1.4rem;
+      padding: 0 1rem;
+    }
+  }
+  
+
+  /* Efecto suave de entrada global */
+.page-fade-in {
+    animation: appearPage 1s ease-out;
+  }
+  
+  @keyframes appearPage {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,90 @@
+/* ✅ src/components/Navbar/MenuLateral.css */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 290px;
+    height: 100vh;
+    background-color: #fff0f6;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
+    z-index: 9999;
+    padding: 1.5rem 1rem;
+    transition: left 0.4s ease;
+    overflow-y: auto;
+    border-right: 2px solid #f0c0e2;
+  }
+  
+  /* Mostrar el menú cuando tiene la clase 'abierto' */
+  .menu-lateral.abierto {
+    left: 0;
+  }
+  
+  /* Cabecera del panel */
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .menu-header h3 {
+    font-size: 1.2rem;
+    color: #8b006b;
+    font-weight: bold;
+  }
+  
+  .btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #c91c8e;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .btn-cerrar:hover {
+    transform: rotate(90deg);
+  }
+  
+  /* Grupos de categorías */
+  .menu-categorias .grupo {
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-categorias .grupo strong {
+    font-size: 1rem;
+    color: #5e005e;
+    display: block;
+    margin-bottom: 0.5rem;
+    padding-left: 0.4rem;
+  }
+  
+  /* Lista de subcategorías */
+  .menu-categorias ul {
+    list-style: none;
+    padding-left: 0.8rem;
+    margin: 0;
+  }
+  
+  .menu-categorias li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .menu-categorias a {
+    text-decoration: none;
+    color: #7b2476;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .menu-categorias a:hover {
+    background-color: #fdd6ef;
+    color: #d4008f;
+    font-weight: 500;
+  }
+  

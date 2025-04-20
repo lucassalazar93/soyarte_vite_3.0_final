@@ -1,0 +1,227 @@
+.historias-section {
+    background: #fff9fc;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    max-width: 1100px;
+    margin: 4rem auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(240, 180, 255, 0.15);
+  }
+  
+  .titulo-historias {
+    font-size: 2.4rem;
+    color: #a855f7;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo-historias {
+    color: #6b7280;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 1rem auto 2rem;
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .grid-testimonios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .tarjeta-testimonio {
+    background: #fff;
+    padding: 2rem 1.6rem;
+    border-radius: 1.3rem;
+    width: 300px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .emoji-testimonio {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .texto-testimonio {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  
+  .autor-testimonio {
+    color: #9333ea;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .formulario-historia {
+    background: rgba(240, 230, 255, 0.3);
+    padding: 2.5rem;
+    border-radius: 1.7rem;
+    max-width: 720px;
+    margin: 3rem auto 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(220, 180, 250, 0.12);
+  }
+  
+  .formulario-historia h3 {
+    color: #7c3aed;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .formulario-historia textarea {
+    width: 100%;
+    max-width: 620px;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    resize: vertical;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+  }
+  
+  .formulario-historia textarea:focus {
+    border-color: #a855f7;
+    outline: none;
+  }
+  
+  .formulario-historia input[type='file'],
+  .formulario-historia input[type='text'],
+  .formulario-historia select {
+    margin: 0.5rem 0 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    max-width: 620px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+  
+  .formulario-historia select:focus,
+  .formulario-historia input[type='text']:focus {
+    border-color: #c084fc;
+    outline: none;
+  }
+  
+  .checkbox-anonimo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  .formulario-historia button {
+    background: #c084fc;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .formulario-historia button:hover {
+    background: #a855f7;
+  }
+  
+  .nota-privacidad {
+    font-size: 0.85rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    line-height: 1.4;
+    font-style: italic;
+  }
+  
+  .mensaje-final-historia {
+    margin-top: 2.5rem;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #6b7280;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Carrusel de frases inspiradoras */
+  .frase-carrusel {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    color: #6b21a8;
+    font-style: italic;
+    margin-bottom: 2.2rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 1s ease;
+    animation: fadeInOut 6s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .tarjeta-testimonio {
+      width: 90%;
+    }
+  
+    .formulario-historia {
+      padding: 1.5rem;
+    }
+  
+    .formulario-historia textarea,
+    .formulario-historia input,
+    .formulario-historia select {
+      max-width: 100%;
+    }
+  }
+  
+  /* Campo "Otra receta" dinámico */
+  #otraRecetaInput {
+    display: none;
+    margin-top: 10px;
+  }
+  

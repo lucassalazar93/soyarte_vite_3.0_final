@@ -1,0 +1,113 @@
+.terapeutico {
+    background: #fff8fc;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    max-width: 950px;
+    margin: 4rem auto;
+    box-shadow: 0 10px 30px rgba(230, 180, 255, 0.1);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .terapeutico h2 {
+    text-align: center;
+    color: #892cdc;
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+  }
+  
+  .ingrediente-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .ingrediente {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    flex: 1 1 40%;
+    box-shadow: 0 8px 20px rgba(223, 184, 255, 0.15);
+    max-width: 400px;
+    transition: transform 0.3s ease;
+  }
+  
+  .ingrediente:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ingrediente h3 {
+    color: #5e1da1;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .ingrediente .icono {
+    font-size: 1.8rem;
+  }
+  
+  .ingrediente p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .ingrediente small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  
+  .divisor {
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px dashed #e6d6f7;
+  }
+  
+  .consejos h3 {
+    color: #3b0764;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+  }
+  
+  .consejos ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .consejos li {
+    margin: 0.8rem 0;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ingrediente-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

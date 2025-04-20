@@ -1,0 +1,180 @@
+/* 🎨 CONTENEDOR GENERAL */
+.container {
+  padding: 2rem 1rem;
+  background-color: #fdf4ff;
+}
+
+/* 🔖 ENCABEZADO */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-size: 2.2rem;
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6b21a8;
+  margin-top: 0.5rem;
+}
+
+/* 📂 SECCIÓN POR CATEGORÍA */
+.categorySection {
+  margin-bottom: 3rem;
+}
+
+.categoryTitle {
+  font-size: 1.7rem;
+  text-align: center;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.categoryTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 0.5rem auto 0;
+  background: linear-gradient(to right, #f9a8d4, #c084fc);
+  border-radius: 3px;
+}
+
+/* 📸 GRID DE RECETAS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🔐 OVERLAY Y BADGE PARA TARJETAS */
+.bloqueadaCard img {
+  filter: blur(4px) brightness(0.8);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b21a8;
+  font-weight: bold;
+  font-size: 0.95rem;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.badgePremium {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+/* 🔳 CONTENIDO INTERNO DE LA TARJETA */
+.cardContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  color: #9333ea;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.cardDescription {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
+}
+
+.cardMeta {
+  font-size: 0.85rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardButton {
+  align-self: flex-start;
+  background: linear-gradient(to right, #f472b6, #c084fc);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cardButton:hover {
+  background: linear-gradient(to right, #e879f9, #a855f7);
+}
+
+/* 👀 VER MÁS */
+.verMasWrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.verMasButton {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.verMasButton:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .cardButton {
+    width: 100%;
+    text-align: center;
+  }
+}

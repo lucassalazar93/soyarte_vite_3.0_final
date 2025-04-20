@@ -1,0 +1,96 @@
+/* 🌸 Contenedor principal */
+.categories-wrapper {
+    background-color: #fff0f6;
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+  
+  /* 📦 Contenedor interno */
+  .categories-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* 🔳 Grid de tarjetas */
+  .categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  /* 🧾 Tarjeta individual */
+  .category-card {
+    background: #f9f5f8;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    text-align: center;
+    height: 480px;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.3);
+  }
+  
+  /* 🖼️ Imagen destacada */
+  .category-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+  }
+  
+  /* 📝 Título */
+  .category-card h3 {
+    font-size: 1.2rem;
+    color: #4b2e57;
+    margin: 1rem 0 0.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* 📝 Descripción */
+  .category-card p {
+    font-size: 0.95rem;
+    color: #555;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+  
+  /* 🔘 Botón */
+  .category-button {
+    display: inline-block;
+    background: #c084fc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .category-button:hover {
+    background-color: #ff66cc;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 102, 204, 0.3);
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 1024px) {
+    .categories-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .categories-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

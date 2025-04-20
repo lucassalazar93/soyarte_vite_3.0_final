@@ -1,0 +1,62 @@
+/* Fondo y distribución general */
+.history-section {
+    background-color: #f9f5f8;
+    padding: 4rem 2rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  /* Contenedor interno alineado */
+  .history-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Columna de texto */
+  .history-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Título armonizado */
+  .history-text h2 {
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #c084fc;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .highlight-title {
+    color: #c084fc;
+  }
+  
+  /* Párrafos */
+  .history-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+  }
+  
+  /* Imagen */
+  .history-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .history-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0; /* ❌ Elimina sombra para integración limpia */
+    box-shadow: none;
+  }
+  

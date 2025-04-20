@@ -1,0 +1,63 @@
+/* 🎀 Encabezado por grupo */
+.encabezado-grupo {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .titulo-grupo {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #a00082;
+    margin-bottom: 0.4rem;
+    position: relative;
+  }
+  
+  .titulo-grupo::before,
+  .titulo-grupo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: #ffb3da;
+  }
+  
+  .titulo-grupo::before {
+    left: 0;
+    transform: translate(-120%, -50%);
+  }
+  
+  .titulo-grupo::after {
+    right: 0;
+    transform: translate(120%, -50%);
+  }
+  
+  .subtexto-grupo {
+    font-size: 1rem;
+    font-style: italic;
+    color: #b173b0;
+    margin-bottom: 1rem;
+  }
+  
+  /* 🔗 Botón "Ver todo" */
+  .btn-ver-todo {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.4rem;
+    background-color: #ff66c4;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 102, 196, 0.2);
+  }
+  
+  .btn-ver-todo:hover {
+    background-color: #d6009a;
+    box-shadow: 0 6px 14px rgba(255, 102, 196, 0.3);
+  }
+  

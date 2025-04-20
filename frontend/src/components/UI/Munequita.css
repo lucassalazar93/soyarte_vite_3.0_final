@@ -1,0 +1,75 @@
+.munequita-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+  }
+  
+  .munequita-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .munequita img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .munequita-text p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #a100ff;
+  }
+  
+  .munequita-text a {
+    font-size: 14px;
+    color: #ffffff;
+    background: #a100ff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  
+  .munequita-text a:hover {
+    background: #8500d2;
+  }
+  
+  /* ✅ Opcional: ocultar en pantallas pequeñas */
+  @media (max-width: 480px) {
+    .munequita-container {
+      flex-direction: column;
+      bottom: 15px;
+      right: 15px;
+      padding: 10px;
+      gap: 5px;
+    }
+  
+    .munequita-text p {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .munequita-text a {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  
+    .munequita img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  

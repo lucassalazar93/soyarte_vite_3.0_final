@@ -1,0 +1,47 @@
+.hero-receta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff5fa;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .hero-columna-izquierda,
+  .hero-columna-derecha {
+    flex: 1 1 50%;
+  }
+  
+  .hero-columna-izquierda img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .hero-titulo {
+    font-size: 2.5rem;
+    color: #7c3aed;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-descripcion {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-datos {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .hero-datos li {
+    margin-bottom: 0.4rem;
+  }
+  

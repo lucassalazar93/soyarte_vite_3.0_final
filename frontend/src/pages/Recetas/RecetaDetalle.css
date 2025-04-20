@@ -1,0 +1,269 @@
+/* =============================================
+🎨 RECETA DETALLE ESTILOS PROFESIONALES v2.3
+Con layout en columnas, imagen izquierda, info derecha, botones abajo, y bloques de ingredientes + utensilios en 2 columnas
+============================================= */
+
+.receta-detalle-container {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fef6ff;
+}
+
+/* 🔝 Hero principal en columnas */
+.receta-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.1);
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-img {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.hero-titulo {
+  font-size: 2.2rem;
+  color: #9333ea;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.hero-titulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #9333ea;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+}
+
+.descripcion-larga {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.datos {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.datos li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* 🧭 Botones de acción debajo del hero */
+.acciones-usuario {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.accion-btn {
+  background-color: #9333ea;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.accion-btn:hover {
+  transform: scale(1.05);
+  background-color: #7e22ce;
+}
+
+.accion-btn.cocinada {
+  background: #34d399;
+}
+
+/* 🧂 Bloque combinado de ingredientes + utensilios */
+.bloque-inferior {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+
+.bloque-inferior > * {
+  flex: 1 1 48%;
+}
+
+/* 🧂 Ingredientes */
+.ingredientes {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.ingredientes h2 {
+  color: #9333ea;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.ingredientes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredientes li {
+  margin-bottom: 0.5rem;
+}
+
+.ingredientes input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* 🍴 Utensilios */
+.utensilios {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.utensilios-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: #9333ea;
+}
+
+.utensilios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.utensilio-chip {
+  background-color: #f5e1ff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #4b0082;
+  position: relative;
+}
+
+.utensilio-chip:hover {
+  transform: scale(1.06);
+  background-color: #e9d5ff;
+}
+
+.utensilio-chip.marcado {
+  text-decoration: line-through;
+  opacity: 0.55;
+  background-color: #d8d8d8;
+}
+
+.utensilio-chip.marcado::after {
+  content: "✓";
+  color: green;
+  font-weight: bold;
+  font-size: 1rem;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  animation: tickIn 0.3s ease forwards;
+}
+
+@keyframes tickIn {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.progreso {
+  font-weight: 600;
+  color: #9333ea;
+  margin-top: 0.8rem;
+}
+
+/* 💬 Mensaje de éxito */
+.mensaje-exito {
+  background-color: #e0ffe3;
+  padding: 1rem;
+  border-left: 6px solid #10b981;
+  margin: 2rem 0;
+  font-weight: 500;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* 📲 Responsive */
+@media (max-width: 768px) {
+  .receta-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque-inferior {
+    flex-direction: column;
+  }
+
+  .bloque-inferior > * {
+    flex: 1 1 100%;
+  }
+
+  .acciones-usuario,
+  .utensilios-grid {
+    justify-content: center;
+  }
+
+  .hero-info {
+    max-height: none;
+    padding: 0;
+  }
+
+  .hero-titulo {
+    font-size: 1.8rem;
+  }
+}

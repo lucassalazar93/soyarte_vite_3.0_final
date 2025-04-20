@@ -1,0 +1,65 @@
+.paso-a-paso {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px dashed #caabc2;
+}
+
+.paso-titulo {
+  font-size: 1.5rem;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+}
+
+.barra-progreso {
+  background-color: #e0e0e0;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.progreso-completado {
+  height: 100%;
+  background-color: #a78bfa;
+  transition: width 0.4s ease;
+}
+
+.paso {
+  background-color: #e1d1ef;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 5px solid #c4b5fd;
+  position: relative;
+}
+
+.paso.completado {
+  background-color: #e9d5ff;
+  opacity: 0.9;
+}
+
+.paso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.imagen-paso {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
+.tiempo-paso {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #6b7280;
+}

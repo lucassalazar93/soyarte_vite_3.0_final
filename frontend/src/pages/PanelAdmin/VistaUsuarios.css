@@ -1,0 +1,205 @@
+/* 🌸 Panel Principal de Usuarios */
+.inventario-panel {
+    padding: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    background: #fff0f6;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+  }
+  
+  /* 🎯 Título */
+  .inventario-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #7c3aed;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 2px solid #ddd6fe;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* 📋 Tabla de Usuarios */
+  .tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .tabla-inventario th,
+  .tabla-inventario td {
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  .tabla-inventario th {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    font-weight: 600;
+  }
+  
+  .tabla-inventario tr:hover {
+    background-color: #faf5ff;
+  }
+  
+  /* 🎛 Botones */
+  .btn-editar,
+  .btn-borrar,
+  .btn-agregar,
+  .btn-exportar {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .btn-editar {
+    background-color: #e0f2fe;
+    color: #0369a1;
+  }
+  
+  .btn-editar:hover {
+    background-color: #bae6fd;
+  }
+  
+  .btn-borrar {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .btn-borrar:hover {
+    background-color: #fecaca;
+  }
+  
+  .btn-agregar {
+    background-color: #ecfdf5;
+    color: #065f46;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-agregar:hover {
+    background-color: #d1fae5;
+  }
+  
+  .btn-exportar {
+    background-color: #ede9fe;
+    color: #5b21b6;
+    margin-left: 0.6rem;
+  }
+  
+  .btn-exportar:hover {
+    background-color: #ddd6fe;
+  }
+  
+  /* 📋 Inputs y Selects */
+  input, select {
+    padding: 8px;
+    margin-bottom: 0.8rem;
+    border: 1px solid #d4d4d8;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 0.95rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* 💾 Botones de formulario */
+  .btn-guardar {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .btn-cancelar {
+    background-color: #fef2f2;
+    color: #991b1b;
+  }
+  
+  .btn-guardar:hover {
+    background-color: #a7f3d0;
+  }
+  
+  .btn-cancelar:hover {
+    background-color: #fecaca;
+  }
+  
+  /* 🧭 Filtros */
+  .filtros-contenedor {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filtro {
+    flex: 1 1 200px;
+  }
+  
+  /* 📱 Responsive */
+  @media screen and (max-width: 768px) {
+    .tabla-inventario {
+      font-size: 0.8rem;
+    }
+  
+    .filtros-contenedor {
+      flex-direction: column;
+    }
+  }
+  
+  /* 🌟 Modal Flotante */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-contenido {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease;
+  }
+  
+  .modal-contenido h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #6b21a8;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+  }
+  
+  .modal-acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  
+  /* ✨ Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

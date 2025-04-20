@@ -1,0 +1,71 @@
+.ofertas-home {
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #fff0f6, #ffe7f9);
+    text-align: center;
+  }
+  
+  .titulo-oferta-home {
+    font-size: 2.4rem;
+    font-family: 'Playfair Display', serif;
+    color: #c43dbc;
+    margin-bottom: 2rem;
+  }
+  
+  .fila-ofertas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card-oferta {
+    width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-oferta:hover {
+    transform: translateY(-6px);
+  }
+  
+  .card-oferta img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .precio-anterior {
+    font-size: 0.9rem;
+    color: #a8a8a8;
+    text-decoration: line-through;
+  }
+  
+  .precio-oferta {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c42e6f;
+  }
+  
+  .btn-ver-mas {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background: #e07bbf;
+    color: #fff;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-ver-mas:hover {
+    background: #c93ca4;
+  }
+  

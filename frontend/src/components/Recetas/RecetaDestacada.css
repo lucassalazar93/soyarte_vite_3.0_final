@@ -1,0 +1,51 @@
+.categorias-destacadas {
+    text-align: center;
+    margin: 40px auto;
+    padding: 0 1rem;
+  }
+  
+  .titulo-categorias {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #6b3476;
+    margin-bottom: 1rem;
+  }
+  
+  .categorias-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .categoria-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .categoria-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d8b4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .categoria-img:hover {
+    transform: scale(1.1);
+  }
+  
+  .categoria-nombre {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #4b2e57;
+    font-size: 0.9rem;
+  }
+  

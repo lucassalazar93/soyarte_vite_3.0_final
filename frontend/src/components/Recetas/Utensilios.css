@@ -1,0 +1,62 @@
+/* ✅ Utensilios.css */
+
+.utensilios {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #fff8fb;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .utensilios-titulo {
+    font-size: 1.4rem;
+    color: #7c3aed;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .utensilios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .utensilio-chip {
+    background: #f3e8ff;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .utensilio-chip:hover {
+    background: #ede9fe;
+  }
+  
+  .utensilio-chip.marcado {
+    background: #c4b5fd;
+    border-color: #a78bfa;
+  }
+  
+  .utensilio-icono {
+    font-size: 1.4rem;
+  }
+  
+  .utensilios-controles {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progreso {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+  

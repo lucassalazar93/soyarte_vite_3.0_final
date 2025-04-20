@@ -1,0 +1,117 @@
+.seccion-promocional {
+  position: relative;
+  background: linear-gradient(120deg, #fceaff, #f6d6ff);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 4rem auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 40px rgba(182, 124, 255, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.promo-contenido {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.promo-texto {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.promo-texto h2 {
+  font-size: 1.8rem;
+  color: #7d1d9e;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+}
+
+.promo-texto .descripcion {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #713b93;
+  margin-bottom: 1.2rem;
+}
+
+.boton-explorar {
+  background: linear-gradient(to right, #9f4ddc, #e4b6ff);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(158, 66, 255, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.boton-explorar:hover {
+  background: #892cc3;
+  transform: translateY(-2px);
+}
+
+.promo-imagen {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-imagen img {
+  max-width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(108, 36, 156, 0.2);
+}
+
+/* Botón cerrar */
+.cerrar-promo {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, #ff66c4, #b259ff);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cerrar-promo:hover {
+  background: #902ac2;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .seccion-promocional {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .promo-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .promo-imagen img {
+    max-width: 80%;
+    max-height: 260px;
+  }
+}

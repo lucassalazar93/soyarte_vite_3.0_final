@@ -1,0 +1,149 @@
+.footer {
+    background: linear-gradient(to right, #fce4ec, #f3e5f5);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    color: #4b2e57;
+    font-family: 'Poppins', sans-serif;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footer-logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-slogan {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #b26ccf;
+  }
+  
+  /* 🌿 Links */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-links a {
+    color: #4b2e57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #c084fc;
+  }
+  
+  /* 🎨 Redes Sociales - Íconos */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  /* Colores oficiales */
+  .icon.facebook {
+    color: #1877F2;
+  }
+  .icon.instagram {
+    color: #E1306C;
+  }
+  .icon.twitter {
+    color: #1DA1F2;
+  }
+  .icon.email {
+    color: #D44638;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+  /* 💌 Registro */
+  .register-form {
+    margin-bottom: 2rem;
+  }
+  
+  .register-form h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #c084fc;
+  }
+  
+  .register-form input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 280px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .register-form button {
+    padding: 10px 30px;
+    background-color: #c084fc;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background-color: #ff66cc;
+  }
+  
+  /* 📜 Legal */
+  .footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-legal a {
+    color: #6a4b7d;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  
+  .footer-legal a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ✨ Frase final */
+  .footer-copy {
+    font-size: 0.9rem;
+    color: #6e4a7f;
+    margin-top: 2rem;
+  }
+  .footer-dev {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-dev strong {
+    color: #c084fc;
+  }
+  

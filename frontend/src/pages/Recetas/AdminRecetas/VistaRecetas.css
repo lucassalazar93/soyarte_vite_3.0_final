@@ -1,0 +1,70 @@
+.vista-recetas {
+    padding: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    background: #fef9fb;
+  }
+  
+  .header-recetas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-recetas h2 {
+    color: #6b21a8;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .btn-agregar {
+    background: linear-gradient(to right, #ec4899, #c026d3);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-agregar:hover {
+    background: linear-gradient(to right, #c026d3, #7e22ce);
+    transform: scale(1.03);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  th {
+    background-color: #f3e8ff;
+    color: #4c1d95;
+    font-weight: bold;
+  }
+  
+  .btn-editar {
+    padding: 6px 12px;
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-editar:hover {
+    background-color: #6d28d9;
+  }
+  

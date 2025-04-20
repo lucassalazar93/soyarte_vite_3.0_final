@@ -1,0 +1,36 @@
+.social-floating {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.5rem 0.3rem;
+    z-index: 999;
+  }
+  
+  /* Iconos individuales */
+  .social-floating a {
+    background-color: #fff0f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(192, 132, 252, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-floating a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(255, 102, 204, 0.4);
+  }
+  
+  .social-floating img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  

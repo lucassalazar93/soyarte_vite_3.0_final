@@ -1,0 +1,28 @@
+.acciones-usuario {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .accion-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #d8b4fe;
+    color: #4a044e;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .accion-btn:hover {
+    background: #c084fc;
+  }
+  
+  .accion-btn.cocinada {
+    background-color: #a7f3d0;
+    color: #065f46;
+    cursor: default;
+  }
+  

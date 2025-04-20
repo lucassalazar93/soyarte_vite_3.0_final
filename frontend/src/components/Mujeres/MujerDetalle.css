@@ -1,0 +1,450 @@
+/* 💜 Fondo general */
+.mujer-detalle {
+    background-color: #fef6fb;
+    font-family: 'Poppins', sans-serif;
+    color: #4b2e57;
+    padding-bottom: 4rem;
+}
+
+/* 🎀 Hero (sección destacada de cada mujer) */
+.hero-mujer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #fdf2ff, #f5ebff);
+    border-radius: 1rem;
+    margin: 4rem auto 3rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.2);
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* 📸 Imagen en el Hero */
+.hero-left img {
+    width: 580px;
+    /* 🔼 Tamaño aumentado */
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    margin-top: 10px;
+    /* 🔽 Separación hacia abajo */
+}
+
+/* 📝 Contenedor del texto en el Hero */
+.hero-right {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    max-width: 480px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-align: left;
+}
+
+/* 🎀 Nombre */
+.hero-right h1 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    color: #9333ea;
+    margin-bottom: 0.5rem;
+}
+
+/* 💬 Cita */
+.hero-right .cita {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #6b21a8;
+    margin-bottom: 1rem;
+}
+
+/* 📍 Ciudad + Ocupación */
+.hero-right .info {
+    font-size: 1rem;
+    color: #7c3aed;
+    margin-bottom: 1.5rem;
+}
+
+/* 🔙 Botón de volver */
+.volver-btn {
+    padding: 12px 24px;
+    background-color: #c084fc;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.volver-btn:hover {
+    background-color: #a855f7;
+    transform: scale(1.05);
+}
+
+/* 🪄 Línea de Vida */
+.timeline {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #4b2e57;
+    margin-bottom: 2rem;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.timeline-item {
+    background: #fef6fd;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(224, 171, 255, 0.15);
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* 💬 Frases Inspiradoras */
+.frase-inspiradora blockquote {
+    font-style: italic;
+    text-align: center;
+    color: #9c4dbe;
+    margin: 3rem auto;
+    font-size: 1.3rem;
+    max-width: 700px;
+}
+
+/* 📸 Galería */
+.galeria {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.galeria h2 {
+    font-size: 1.8rem;
+    color: #4b2e57;
+    margin-bottom: 1.5rem;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.galeria-grid figure {
+    background: #fff0fb;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(192, 132, 252, 0.15);
+    transition: all 0.35s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3d1fc;
+}
+
+.galeria-grid figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(203, 110, 255, 0.4);
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeria-grid figcaption {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.8rem;
+    background: #fbe8ff;
+    color: #4b2e57;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 📽 Video */
+.video-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.video-section h2 {
+    font-size: 1.8rem;
+    color: #4b2e57;
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(192, 132, 252, 0.3);
+}
+
+.video-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.8rem;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+/* 🌟 Impacto visual con animaciones */
+.impacto {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #fdf4ff, #fef6fb);
+}
+
+.impacto h2 {
+    font-size: 2.5rem;
+    color: #9333ea;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 3rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Tarjetas más grandes con animación */
+.impacto-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.impacto-card {
+    background: #f5e9ff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(192, 132, 252, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* 🧲 Efecto al pasar el mouse */
+.impacto-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 16px 30px rgba(192, 132, 252, 0.4);
+}
+
+.impacto-card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.impacto-card h3 {
+    font-size: 2.2rem;
+    color: #6d28d9;
+    margin-bottom: 0.5rem;
+}
+
+.impacto-card p {
+    font-size: 1.1rem;
+    color: #4b2e57;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* 💌 Instagram Button */
+.btn-instagram-wrapper {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.btn-rosa-centro {
+    background: linear-gradient(90deg, #ff77d9, #bb6bf6);
+    color: white;
+    padding: 18px 40px;
+    /* Aumentamos el padding */
+    border: none;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    /* Un poco más grande */
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    /* Para alinear íconos si agregas */
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 16px rgba(200, 80, 255, 0.3);
+}
+
+.btn-rosa-centro:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(200, 80, 255, 0.4);
+}
+
+
+/* 🔁 Carrusel de otras mujeres */
+.otras-inspiradoras {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.otras-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+.otra-card {
+    min-width: 150px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: #fff0fb;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.otra-card:hover {
+    transform: scale(1.05);
+}
+
+.otra-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .hero-mujer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left img {
+        width: 90%;
+    }
+
+    .hero-right {
+        max-width: 100%;
+    }
+
+    .impacto-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* 💫 Sección Historia de Transformación */
+.historia-transformacion {
+    background: linear-gradient(to right, #fdf4ff, #fbe8ff);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(203, 142, 255, 0.15);
+    margin: 4rem auto;
+    max-width: 850px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.historia-contenido h2 {
+    font-size: 2.2rem;
+    color: #9333ea;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.historia-contenido h2::before {
+    content: "💜";
+    font-size: 1.6rem;
+}
+
+.historia-contenido p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5c3c63;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.frase-impacto {
+    font-style: italic;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #a855f7;
+    border-left: 4px solid #e4c0ff;
+    padding-left: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

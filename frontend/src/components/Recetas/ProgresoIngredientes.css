@@ -1,0 +1,57 @@
+.barra-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff;
+    border: 2px solid #9333ea;
+    border-radius: 12px;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    min-width: 260px;
+    cursor: grab;
+    transition: all 0.3s ease;
+  }
+  
+  .barra-flotante:active {
+    cursor: grabbing;
+  }
+  
+  .texto {
+    font-weight: bold;
+    color: #9333ea;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+  }
+  
+  .barra-progreso {
+    background-color: #f3e8ff;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .barra-interna {
+    height: 100%;
+    background-color: #9333ea;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+  
+  .cerrar-btn {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    color: #9333ea;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .cerrar-btn:hover {
+    transform: scale(1.2);
+  }
+  

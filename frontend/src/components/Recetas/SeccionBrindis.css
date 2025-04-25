@@ -1,0 +1,86 @@
+/* Estilos específicos del Capítulo 4 */
+#capitulo-4 {
+    background: linear-gradient(to bottom right, #fdf4ff, #fce7f3);
+    padding: 4rem 2rem;
+  }
+  
+  #capitulo-4 .capitulo-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #capitulo-4 .imagen img {
+    max-width: 630px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  #capitulo-4 .texto {
+    max-width: 540px;
+    font-family: 'Quicksand', sans-serif;
+    color: #4b2e57;
+    line-height: 1.8;
+  }
+  
+  #capitulo-4 h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #7c3aed;
+  }
+  
+  #capitulo-4 .subtitulo-suspiro {
+    color: #f472b6;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 0.3rem;
+  }
+  
+  #capitulo-4 .frase-destacada {
+    color: #8b5cf6;
+    font-style: italic;
+    font-weight: 600;
+  }
+  
+  #capitulo-4 .btn-ir-seccion {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(to right, #7c3aed, #ec4899);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #capitulo-4 .btn-ir-seccion:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #a78bfa, #f472b6);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    #capitulo-4 .capitulo-contenido {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #capitulo-4 .imagen img {
+      max-width: 100%;
+    }
+  
+    #capitulo-4 .texto {
+      max-width: 100%;
+      padding: 1rem 0;
+    }
+  }
+  

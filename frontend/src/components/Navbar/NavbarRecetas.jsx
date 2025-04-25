@@ -1,10 +1,8 @@
-// ✅ src/components/Navbar/NavbarRecetas.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FaBars,
   FaTimes,
-  FaSearch,
   FaHeart,
   FaUser,
   FaUtensils,
@@ -13,11 +11,29 @@ import {
   FaHome,
   FaInfoCircle,
   FaEnvelope,
+  FaLightbulb,
 } from "react-icons/fa";
+import FiltrosRecetas from "./FiltrosRecetas";
 import "./NavbarRecetas.css";
+
+const frases = [
+  "Cocinar también es una forma de sanar el alma 💜",
+  "Cada receta guarda una historia por contar 🍲",
+  "Una receta puede ser el abrazo que necesitas 🤗",
+  "Sazonar con amor es el mejor ingrediente 💫",
+  "Cocinar es un acto de amor propio 🌸",
+];
 
 const NavbarRecetas = () => {
   const [menuAbierto, setMenuAbierto] = useState(false);
+  const [fraseAleatoria, setFraseAleatoria] = useState("");
+  const [mostrarFiltrosRecetas, setMostrarFiltrosRecetas] = useState(false);
+
+  // Mostrar frase aleatoria al cargar
+  useEffect(() => {
+    const frase = frases[Math.floor(Math.random() * frases.length)];
+    setFraseAleatoria(frase);
+  }, []);
 
   const toggleMenu = () => setMenuAbierto(!menuAbierto);
   const cerrarMenu = () => setMenuAbierto(false);
@@ -25,44 +41,57 @@ const NavbarRecetas = () => {
   return (
     <>
       <nav className="navbar-recetas">
-        <div className="bloque-izquierdo">
-          <button className="btn-hamburguesa" onClick={toggleMenu}>
+        {/* IZQUIERDA */}
+        <div className="navbar-recetas__bloque-izquierdo">
+          <button className="navbar-recetas__btn-hamburguesa" onClick={toggleMenu}>
             <FaBars />
           </button>
           <Link to="/">
-            <img src="/images/logo.png" alt="Soy Arte" className="logo-recetas" />
+            <img src="/images/logo.png" alt="Logo Soy Arte" className="navbar-recetas__logo" />
           </Link>
         </div>
 
-        <div className="bloque-buscador">
-          <div className="contenedor-busqueda">
-            <FaSearch className="icono-busqueda" />
-            <input
-              type="text"
-              className="input-busqueda"
-              placeholder="Buscar recetas saludables..."
-            />
-          </div>
+        {/* FRASE CENTRAL */}
+        <div className="navbar-recetas__frase-central">
+          <FaLightbulb className="navbar-recetas__icono-frase" />
+          <span>{fraseAleatoria}</span>
         </div>
 
-        <div className="bloque-derecho">
-          <Link to="/mi-recetario" className="btn-receta">
-            <FaHeart className="icono-accion" /> Recetario
+        {/* DERECHA */}
+        <div className="navbar-recetas__bloque-derecho">
+          <Link
+            to="#"
+            onClick={() => setMostrarFiltrosRecetas(!mostrarFiltrosRecetas)}
+            className="navbar-recetas__btn navbar-recetas__btn--filtros"
+          >
+            🎛️ Filtros
           </Link>
-          <Link to="/login" className="btn-receta btn-entrar">
-            <FaUser className="icono-accion" /> Mi cuenta
+          <Link to="/mi-recetario" className="navbar-recetas__btn">
+            <FaHeart className="navbar-recetas__icono" /> Recetario
+          </Link>
+          <Link to="/login" className="navbar-recetas__btn navbar-recetas__btn--entrar">
+            <FaUser className="navbar-recetas__icono" /> Mi cuenta
           </Link>
         </div>
       </nav>
 
+      {/* MENÚ LATERAL */}
       {menuAbierto && (
-        <div className="menu-lateral-recetas">
-          <div className="encabezado-menu">
-            <h3>🍳 Explora recetas</h3>
-            <button className="cerrar-menu" onClick={cerrarMenu}>
+        <div className="navbar-recetas__menu-lateral">
+          <div className="navbar-recetas__menu-encabezado">
+            <h3>🍽️ Explora recetas</h3>
+            <button
+              className="navbar-recetas__btn-cerrar"
+              onClick={cerrarMenu}
+              title="Cerrar menú lateral"
+            >
               <FaTimes />
             </button>
           </div>
+
+          <Link to="/bienvenida-recetas" onClick={cerrarMenu} className="link-bienvenida-recetas">
+            🌸 Inicio del Recetario
+          </Link>
           <Link to="/" onClick={cerrarMenu}><FaHome /> Inicio</Link>
           <Link to="/recetas" onClick={cerrarMenu}><FaUtensils /> Todas las recetas</Link>
           <Link to="/mi-recetario" onClick={cerrarMenu}><FaHeart /> Mi recetario</Link>
@@ -71,6 +100,16 @@ const NavbarRecetas = () => {
           <Link to="/sobre-nosotros" onClick={cerrarMenu}><FaInfoCircle /> Sobre Nosotros</Link>
           <Link to="/contacto" onClick={cerrarMenu}><FaEnvelope /> Contacto</Link>
         </div>
+      )}
+
+      {/* 🎛️ FILTROS */}
+      {mostrarFiltrosRecetas && (
+        <FiltrosRecetas
+          onFiltrar={(f) => console.log("Filtros aplicados:", f)}
+          onSorprendeme={() => alert("🎲 Receta sorpresa lista 🍽️")}
+          categorias={["Postres", "Sopas", "Tartas", "Ensaladas"]}
+          autores={["Lukas", "Nore", "Chef Luna"]}
+        />
       )}
     </>
   );

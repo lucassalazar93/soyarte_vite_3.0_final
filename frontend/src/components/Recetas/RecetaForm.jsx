@@ -79,15 +79,8 @@ const RecetaForm = ({ receta = {}, setReceta, modoEdicion, recetaId, cerrarModal
   };
 
   const handleGuardar = async () => {
-    // ✅ Validación profesional de campos obligatorios
-    if (
-      !receta.titulo?.trim() ||
-      !receta.grupo_id ||
-      !receta.categoria_id ||
-      !receta.nivel_dificultad?.trim()
-    ) {
+    if (!receta.titulo?.trim() || !receta.grupo_id || !receta.categoria_id || !receta.nivel_dificultad?.trim()) {
       alert("❌ Por favor completa los campos obligatorios: título, grupo, categoría y nivel de dificultad.");
-      console.log("🧠 Estado actual de receta:", receta);
       return;
     }
 
@@ -129,6 +122,23 @@ const RecetaForm = ({ receta = {}, setReceta, modoEdicion, recetaId, cerrarModal
       alert("❌ Error inesperado al guardar.");
     } finally {
       setEnviando(false);
+    }
+  };
+
+  const handleEliminar = async () => {
+    const confirmar = window.confirm("¿Estás seguro de que deseas eliminar esta receta? Esta acción no se puede deshacer.");
+    if (!confirmar) return;
+
+    try {
+      const res = await fetch(`${BASE_URL}/api/recetas/${recetaId}`, { method: "DELETE" });
+      const result = await res.json();
+      if (result.error) return alert("❌ Error: " + result.error);
+      alert("🗑️ Receta eliminada correctamente.");
+      cerrarModal();
+      recargar();
+    } catch (err) {
+      console.error("❌ Error al eliminar receta:", err);
+      alert("❌ Error inesperado al eliminar.");
     }
   };
 
@@ -224,6 +234,11 @@ const RecetaForm = ({ receta = {}, setReceta, modoEdicion, recetaId, cerrarModal
             {enviando ? "⏳ Guardando..." : "💾 Guardar"}
           </button>
           <button onClick={cerrarModal}>❌ Cancelar</button>
+          {modoEdicion && (
+            <button className="btn-eliminar" onClick={handleEliminar}>
+              🗑️ Eliminar
+            </button>
+          )}
         </div>
       </div>
     </div>

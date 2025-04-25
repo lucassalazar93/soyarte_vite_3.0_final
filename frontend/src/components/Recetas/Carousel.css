@@ -1,140 +1,149 @@
 :root {
-    --lavanda: #d8b4f8;
-    --rosa: #fddde6;
-    --fucsia: #e63976;
-    --texto: #4b2e57;
-    --sombra: rgba(0, 0, 0, 0.3);
+  --lavanda: #d8b4f8;
+  --rosa: #fddde6;
+  --fucsia: #e63976;
+  --texto: #4b2e57;
+  --sombra: rgba(0, 0, 0, 0.3);
+}
+
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.carousel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 600px;
+  width: auto;
+}
+
+.text-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: inline-block;
+  animation: fadeInUp 1s ease-out;
+  color: #fff;
+}
+
+.carousel-title {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.carousel-subtitle {
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 1.2rem;
+  color: #f9f9f9;
+}
+
+.btn-carousel {
+  background: #f7a8a6;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  padding: 12px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.btn-carousel:hover {
+  background: #ff8e8a;
+  transform: scale(1.05);
+}
+
+.btn-carousel.pasta {
+  background: linear-gradient(to right, #d8b4f8, #ffafbd);
+}
+.btn-carousel.postre {
+  background: linear-gradient(to right, #fddde6, #f6a5c0);
+}
+.btn-carousel.carne {
+  background: linear-gradient(to right, #f25f5c, #d72638);
+}
+.btn-carousel.sopa {
+  background: linear-gradient(to right, #b2f7ef, #aad2f9);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .carousel {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Playfair Display', serif;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Imagen de fondo */
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-  
-  /* Capa de oscuridad para contraste */
-  .carousel::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    z-index: 1;
-  }
-  
-  /* Contenedor del texto */
-  .carousel-overlay {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    z-index: 2;
-    max-width: 600px;
-    width: auto;
-  }
-  
-  /* Fondo detrás del texto */
-  .text-background {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1.5rem;
-    border-radius: 12px;
-    display: inline-block;
-    animation: fadeInUp 1s ease-out;
-    color: #fff;
-  }
-  
-  /* Título del carrusel */
+}
+
+@media (max-width: 768px) {
   .carousel-title {
-    font-size: 3rem;
-    font-family: 'Playfair Display', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
   }
-  
-  /* Subtítulo */
+
   .carousel-subtitle {
-    font-size: 1.1rem;
-    font-family: 'Quicksand', sans-serif;
-    margin-bottom: 1.2rem;
-    color: #f9f9f9;
+    font-size: 1rem;
   }
-  
-  /* Botón */
+
   .btn-carousel {
-    background: #f7a8a6;
-    color: #fff;
-    font-size: 1.1rem;
-    border-radius: 50px;
-    padding: 12px 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
-  
-  .btn-carousel:hover {
-    background: #ff8e8a;
-    transform: scale(1.05);
+
+  .carousel-overlay {
+    left: 6%;
+    max-width: 90%;
   }
-  
-  /* Categorías con gradiente */
-  .btn-carousel.pasta {
-    background: linear-gradient(to right, #d8b4f8, #ffafbd);
-  }
-  .btn-carousel.postre {
-    background: linear-gradient(to right, #fddde6, #f6a5c0);
-  }
-  .btn-carousel.carne {
-    background: linear-gradient(to right, #f25f5c, #d72638);
-  }
-  .btn-carousel.sopa {
-    background: linear-gradient(to right, #b2f7ef, #aad2f9);
-  }
-  
-  /* Animación */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .carousel-title {
-      font-size: 2rem;
-    }
-  
-    .carousel-subtitle {
-      font-size: 1rem;
-    }
-  
-    .btn-carousel {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
-  
-    .carousel-overlay {
-      left: 6%;
-      max-width: 90%;
-    }
-  }
-  
+}
+/* 🎯 Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--fucsia);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* 🌀 Mejora visual para cada slide */
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}

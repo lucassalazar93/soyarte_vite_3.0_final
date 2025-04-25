@@ -9,7 +9,7 @@ import NavbarTienda from "./components/Navbar/NavbarTienda";
 import NavbarRecetas from "./components/Navbar/NavbarRecetas";
 import Footer from "./components/Footer/Footer";
 import SocialFloating from "./components/SocialFloating/SocialFloating";
-import Munequita from "./components/UI/Munequita"; // ✅ NUEVO
+import Munequita from "./components/UI/Munequita";
 
 // 🏠 Páginas públicas
 import Home from "./pages/Home";
@@ -40,6 +40,7 @@ import RecetaDetalle from "./pages/Recetas/RecetaDetalle";
 import RecetasCocinadas from "./pages/Recetas/RecetasCocinadas";
 import MiRecetario from "./pages/Recetas/MiRecetario";
 import ColeccionCategoria from "./pages/Recetas/ColeccionCategoria";
+import BienvenidaRecetas from "./pages/Recetas/BienvenidaRecetas";
 
 // 🧘 Terapia
 import TerapiaCulinaria from "./pages/TerapiaCulinaria/TerapiaCulinaria";
@@ -66,19 +67,22 @@ function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔒 Ocultar layout en login y register
+  // 🔒 Ocultar navbar y footer en login y register
   const ocultarLayout = ["/login", "/register"].includes(location.pathname);
+
+  // 🎨 Navbar especial de tienda
   const esTienda = location.pathname.startsWith("/tienda");
 
-  // 🍽️ Detectar rutas de recetas (incluye recetario y colecciones)
+  // 🍽️ Navbar especial para recetas
   const esRutaRecetas =
     location.pathname.startsWith("/recetas") ||
     location.pathname.startsWith("/mi-recetario") ||
-    location.pathname.startsWith("/coleccion-categoria");
+    location.pathname.startsWith("/coleccion-categoria") ||
+    location.pathname.startsWith("/bienvenida-recetas");
 
   return (
     <>
-      {/* ✅ Mostrar navbar según la sección actual */}
+      {/* ✅ Mostrar navbar según contexto */}
       {!ocultarLayout &&
         (esRutaRecetas ? (
           <NavbarRecetas />
@@ -89,10 +93,10 @@ function App() {
         ))}
 
       {!ocultarLayout && <SocialFloating />}
-      {!ocultarLayout && <Munequita />} {/* ✅ Muñequita de ayuda */}
+      {!ocultarLayout && <Munequita />}
 
       <Routes>
-        {/* 🌐 Páginas públicas */}
+        {/* 🌐 Públicas */}
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/register" element={<Register />} />
@@ -104,6 +108,7 @@ function App() {
         <Route path="/mujeres/:id" element={<MujerDetalle />} />
 
         {/* 🍽️ Recetas */}
+        <Route path="/bienvenida-recetas" element={<BienvenidaRecetas />} />
         <Route path="/recetas" element={<RecetasPage />} />
         <Route path="/recetas/:id" element={<RecetaDetalle />} />
         <Route path="/mi-recetario" element={<MiRecetario />} />
@@ -208,7 +213,7 @@ function App() {
         />
       </Routes>
 
-      {/* ✅ Mostrar footer si corresponde */}
+      {/* ✅ Footer si aplica */}
       {!ocultarLayout && <Footer />}
     </>
   );

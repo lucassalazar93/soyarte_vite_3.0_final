@@ -1,0 +1,60 @@
+/* src/pages/Recetas/BienvenidaRecetas.css */
+.bienvenida-container {
+    height: 100vh;
+    background-image: url("/images/cocina-bienvenida.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-bienvenida {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .hero-bienvenida h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffeef7;
+  }
+  
+  .hero-bienvenida em {
+    font-style: italic;
+    color: #fbcfe8;
+  }
+  
+  .hero-bienvenida p {
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 1rem;
+    color: #fef3f3;
+  }
+  
+  .btn-viaje {
+    margin-top: 1rem;
+    background: linear-gradient(to right, #f472b6, #c084fc);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn-viaje:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ec4899, #9333ea);
+  }
+  

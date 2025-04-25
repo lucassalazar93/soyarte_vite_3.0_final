@@ -1,10 +1,7 @@
-// ✅ src/pages/Recetas/RecetasPage.jsx
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Carousel from "../../components/Recetas/Carousel";
+import { useNavigate } from "react-router-dom";
 import RecetaDestacada from "../../components/Recetas/RecetaDestacada";
 import RecetasPorCategoria from "../../components/Recetas/RecetasPorCategoria";
-import FiltrosRecetas from "../../components/Recetas/FiltrosRecetas";
 import "./RecetasPage.css";
 
 const RecetasPage = () => {
@@ -12,8 +9,9 @@ const RecetasPage = () => {
   const [recetasFiltradas, setRecetasFiltradas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [mostrarRecetario, setMostrarRecetario] = useState(false);
+  const navigate = useNavigate();
 
+  // 🧠 Cargar recetas desde backend
   useEffect(() => {
     fetch("http://localhost:5000/api/recetas")
       .then((res) => {
@@ -32,11 +30,7 @@ const RecetasPage = () => {
       });
   }, []);
 
-  useEffect(() => {
-    const guardadas = JSON.parse(localStorage.getItem("recetasGuardadas") || "[]");
-    setMostrarRecetario(guardadas.length > 0);
-  }, [recetas]);
-
+  // 🧁 Agrupar recetas por categoría
   const agruparPorCategoria = (recetas) => {
     return recetas.reduce((acc, receta) => {
       const categoria = receta.categoria_nombre || "Otras";
@@ -62,91 +56,23 @@ const RecetasPage = () => {
     }, {});
   };
 
-  const aplicarFiltros = (filtros) => {
-    const resultado = recetas.filter((receta) => {
-      const coincideNombre = filtros.nombre
-        ? receta.titulo.toLowerCase().includes(filtros.nombre.toLowerCase())
-        : true;
-
-      const coincideCategoria = filtros.categoria
-        ? receta.categoria_nombre === filtros.categoria
-        : true;
-
-      const coincideTiempo = filtros.tiempo
-        ? filtros.tiempo === "Menos de 15 min"
-          ? receta.tiempo_preparacion <= 15
-          : filtros.tiempo === "15-30 min"
-          ? receta.tiempo_preparacion > 15 && receta.tiempo_preparacion <= 30
-          : receta.tiempo_preparacion > 45
-        : true;
-
-      const coincideNivel = filtros.nivel
-        ? receta.nivel_dificultad === filtros.nivel
-        : true;
-
-      const coincideAutor = filtros.autor
-        ? (receta.autor || "Anónimo").toLowerCase().includes(filtros.autor.toLowerCase())
-        : true;
-
-      return (
-        coincideNombre &&
-        coincideCategoria &&
-        coincideTiempo &&
-        coincideNivel &&
-        coincideAutor
-      );
-    });
-
-    setRecetasFiltradas(resultado);
-  };
-
-  const sorprenderme = () => {
-    if (recetasFiltradas.length > 0) {
-      const aleatoria = recetasFiltradas[Math.floor(Math.random() * recetasFiltradas.length)];
-      alert(`✨ Prueba esta receta: ${aleatoria.title}`);
-    }
-  };
-
-  const autores = [...new Set(recetas.map((r) => r.autor || "Anónimo"))];
-  const categorias = [...new Set(recetas.map((r) => r.categoria_nombre).filter(Boolean))];
-
   return (
     <div className="recetas-page">
-      {/* ✅ Botón para ver recetario si hay recetas guardadas 
-      {mostrarRecetario && (
-        <div className="recetario-boton-wrapper">
-          <Link to="/mi-recetario" className="boton-recetario">
-            💾 Ver mi recetario
-          </Link>
-        </div>
-      )}*/}
-
-      <Carousel />
-
+      {/* 📌 Receta destacada */}
       <section className="recetas-destacadas">
-        <h2 className="seccion-titulo">🍽️ Recetas destacadas</h2>
         {loading && <p className="cargando">Cargando recetas...</p>}
         {error && <p className="error">{error}</p>}
         {!loading && !error && <RecetaDestacada recetas={recetas} />}
       </section>
 
+      {/* 📚 Recetas agrupadas por categoría */}
       {!loading && !error && (
-        <>
-          <FiltrosRecetas
-            onFiltrar={aplicarFiltros}
-            autores={autores}
-            categorias={categorias}
-            onSorprendeme={sorprenderme}
+        <section className="super-delicias">
+          <RecetasPorCategoria
+            recipesByCategory={agruparPorCategoria(recetasFiltradas)}
+            isAdmin={false}
           />
-
-          <section className="super-delicias">
-            <h2 className="seccion-titulo">🍱 Explora por categoría</h2>
-            <RecetasPorCategoria
-              recipesByCategory={agruparPorCategoria(recetasFiltradas)}
-              isAdmin={false}
-            />
-          </section>
-        </>
+        </section>
       )}
     </div>
   );

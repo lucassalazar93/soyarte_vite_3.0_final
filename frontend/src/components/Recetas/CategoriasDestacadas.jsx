@@ -14,7 +14,6 @@ const CategoriasDestacadas = () => {
 
   return (
     <section className="categorias-destacadas">
-      <h2>🍽️ Explora por categoría</h2>
       <div className="categorias-grid">
         {categorias.map((cat) => (
           <Link

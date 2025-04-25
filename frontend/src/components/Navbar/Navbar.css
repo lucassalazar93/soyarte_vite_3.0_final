@@ -1,5 +1,4 @@
-/* 🌟 Estilo global del navbar */
-.navbar {
+.navbar-principal {
   background: linear-gradient(to right, #fbe5fc, #f1c4f9);
   backdrop-filter: blur(10px);
   display: flex;
@@ -12,36 +11,26 @@
   top: 0;
   z-index: 1000;
   flex-wrap: wrap;
-  transition: all 0.3s ease-in-out;
 }
 
-/* 🖼 Logo */
-.logo img {
+.logo-principal img {
   width: 75px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #e09bff;
-}
-
-/* 📌 Enlaces */
-.nav-links {
+.nav-links-principal {
   display: flex;
   gap: 1.8rem;
   font-weight: 600;
   font-size: 1rem;
-  flex-wrap: wrap;
 }
 
-.nav-links a {
+.nav-links-principal a {
   text-decoration: none;
   color: #5d2e7e;
   position: relative;
 }
 
-.nav-links a::after {
+.nav-links-principal a::after {
   content: '';
   position: absolute;
   width: 0%;
@@ -52,36 +41,30 @@
   transition: width 0.3s;
 }
 
-.nav-links a:hover::after {
+.nav-links-principal a:hover::after {
   width: 100%;
 }
 
-/* 🧍 Usuario + Carrito */
-.user-cart-section {
+.user-cart-principal {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
-.cart-link {
+.cart-link-principal {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
 }
 
-.cart-link:hover {
-  color: #8500d2;
-}
-
-.cart-icon {
+.cart-icon-principal {
   margin-right: 5px;
   font-size: 1.5rem;
 }
 
-.cart-icon.animar {
+.cart-icon-principal.animar {
   animation: bounce 0.5s ease;
 }
 
@@ -92,7 +75,7 @@
   100% { transform: scale(1); }
 }
 
-.contador-carrito {
+.contador-carrito-principal {
   position: absolute;
   top: -6px;
   right: -10px;
@@ -104,15 +87,12 @@
   border-radius: 50%;
 }
 
-.user-name {
+.user-name-principal {
   color: #4b0055;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
 }
 
-.logout-btn {
+.logout-btn-principal {
   background: linear-gradient(90deg, #f676c9, #dc73e1);
   color: white;
   padding: 0.5rem 1rem;
@@ -120,56 +100,4 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.logout-btn:hover {
-  background: #d158c2;
-}
-
-/* 📱 Responsive + hamburguesa */
-.nav-menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.nav-menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background-color: #6a1b9a;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #f9d5f3;
-    padding: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-menu-toggle {
-    display: flex;
-  }
-
-  .user-cart-section {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-  }
 }

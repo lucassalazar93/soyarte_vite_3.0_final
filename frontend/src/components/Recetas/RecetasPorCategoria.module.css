@@ -1,3 +1,11 @@
+:root {
+  --lavanda: #d8b4f8;
+  --rosa: #fddde6;
+  --fucsia: #e63976;
+  --texto: #4b2e57;
+  --sombra: rgba(0, 0, 0, 0.3);
+}
+
 /* 🎨 CONTENEDOR GENERAL */
 .container {
   padding: 2rem 1rem;
@@ -55,6 +63,33 @@
   padding: 1rem 0;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* ✅ Hover 3D + sombra flotante */
+.grid > div {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.grid > div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+.grid > div:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 🔐 OVERLAY Y BADGE PARA TARJETAS */
@@ -165,8 +200,7 @@
 /* 📱 RESPONSIVO */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+    display: none; /* Oculta el grid en móvil para evitar doble render */
   }
 
   .mainTitle {
@@ -176,5 +210,17 @@
   .cardButton {
     width: 100%;
     text-align: center;
+  }
+
+  /* ✅ Mejora visual para tarjetas en Swiper (solo en móvil) */
+  .swiper-slide {
+    width: auto !important;
+    max-width: 85%;
+    padding: 0.5rem 0.2rem;
+    box-sizing: border-box;
+  }
+
+  .swiper-slide > div {
+    height: 100%;
   }
 }

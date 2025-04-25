@@ -1,4 +1,10 @@
-import React, { useState, useEffect } from "react";
+// ✅ src/components/Recetas/Carousel.jsx
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 import "./Carousel.css";
 
 const images = [
@@ -33,34 +39,41 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const { src, title, subtitle, link, categoria } = images[current];
-
   return (
     <div className="carousel">
-      <img
-        src={src}
-        alt={title}
-        className="carousel-image"
-        onError={(e) => (e.target.src = "/images/default.jpg")}
-      />
-      <div className="carousel-overlay">
-        <div className="text-background">
-          <h2 className="carousel-title">{title}</h2>
-          <p className="carousel-subtitle">{subtitle}</p>
-          <a href={link} className={`btn-carousel ${categoria}`}>
-            Explorar receta
-          </a>
-        </div>
-      </div>
+      <Swiper
+        modules={[Autoplay, EffectFade, Pagination]}
+        effect="fade"
+        loop={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        className="swiper-recetas"
+      >
+        {images.map(({ src, title, subtitle, link, categoria }, i) => (
+          <SwiperSlide key={i}>
+            <div className="slide">
+              <img
+                src={src}
+                alt={title}
+                className="carousel-image"
+                onError={(e) => (e.target.src = "/images/default.jpg")}
+              />
+              <div className="carousel-overlay">
+                <div className="text-background">
+                  <h2 className="carousel-title">{title}</h2>
+                  <p className="carousel-subtitle">{subtitle}</p>
+                  <a href={link} className={`btn-carousel ${categoria}`}>
+                    Explorar receta
+                  </a>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

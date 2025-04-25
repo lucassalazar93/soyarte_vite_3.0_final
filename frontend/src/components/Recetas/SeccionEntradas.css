@@ -1,0 +1,108 @@
+/* src/components/Recetas/SeccionEntradas.css */
+.seccion-capitulo {
+    background: linear-gradient(to bottom right, #fef3f9, #f5ebff);
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .capitulo-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .texto {
+    flex: 1;
+    max-width: 620px;
+  }
+  
+  .texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #7e22ce;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo-suspiro {
+    display: block;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ec4899;
+    margin-top: 0.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .texto p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    font-family: 'Quicksand', sans-serif;
+    color: #4b2e57;
+    margin-top: 1rem;
+  }
+  
+  .frase-destacada {
+    color: #9333ea;
+    font-style: italic;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imagen img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+  }
+  
+  .imagen img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive */
+  @media (max-width: 980px) {
+    .capitulo-contenido {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .texto {
+      max-width: 90%;
+    }
+  
+    .imagen img {
+      max-width: 90%;
+    }
+  }
+  
+  .btn-ir-seccion {
+    margin-top: 1.5rem;
+    background: linear-gradient(to right, #c084fc, #f472b6);
+    border: none;
+    color: white;
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn-ir-seccion:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #9333ea, #ec4899);
+  }
+  

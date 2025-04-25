@@ -27,7 +27,6 @@ const scrollToCategoria = (id) => {
 const RecetaDestacada = () => {
   return (
     <div className="categorias-destacadas">
-      <h2 className="titulo-categorias">🍽 Categorías Destacadas</h2>
       <div className="categorias-contenedor">
         {categorias.map((cat, index) => (
           <div

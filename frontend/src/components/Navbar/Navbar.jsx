@@ -1,3 +1,4 @@
+// src/components/Navbar/Navbar.jsx
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
@@ -14,7 +15,6 @@ const Navbar = () => {
   const [animarCarrito, setAnimarCarrito] = useState(false);
   const [menuAbierto, setMenuAbierto] = useState(false);
 
-  // 🎯 Efecto para animar ícono de carrito cuando se agrega algo
   useEffect(() => {
     if (carrito.length > 0) {
       setAnimarCarrito(true);
@@ -24,55 +24,51 @@ const Navbar = () => {
   }, [carrito]);
 
   const handleLogout = () => {
-    logout();           // ✅ Limpia la sesión
-    navigate("/");      // 🔁 Redirige al inicio
+    logout();
+    navigate("/");
   };
 
   return (
-    <nav className="navbar">
-      {/* 🎨 Logo principal */}
-      <div className="logo">
+    <nav className="navbar-principal">
+      <div className="logo-principal">
         <Link to="/">
           <img src="/images/logo.png" alt="Soy Arte" />
         </Link>
       </div>
 
-      {/* 🍔 Botón de menú para móvil */}
       <div className="nav-menu-toggle" onClick={() => setMenuAbierto(!menuAbierto)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* 🌸 Enlaces principales */}
-      <ul className={`nav-links ${menuAbierto ? "active" : ""}`}>
+      <ul className={`nav-links-principal ${menuAbierto ? "active" : ""}`}>
         <li><Link to="/">Inicio</Link></li>
         <li><Link to="/mujeres">Mujeres</Link></li>
-        <li><Link to="/recetas">Recetas</Link></li>
+        <li><Link to="/bienvenida-recetas">Recetas</Link></li>
         <li><Link to="/terapia-culinaria">Terapia Culinaria</Link></li>
         <li><Link to="/tienda">Tienda</Link></li>
-        <li><Link to="/blog">Blog</Link></li> {/* ✅ NUEVO */}
+        <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/recetas-cocinadas">Cocinadas</Link></li>
         {user?.role === "admin" && <li><Link to="/admin">Admin</Link></li>}
       </ul>
 
-      {/* 🛍️ Carrito y usuario */}
-      <div className="user-cart-section">
-        <Link to="/carrito" className="cart-link">
-          <FaShoppingCart className={`cart-icon ${animarCarrito ? "animar" : ""}`} />
-          {totalCantidad > 0 && <span className="contador-carrito">{totalCantidad}</span>}
+      <div className="user-cart-principal">
+        <Link to="/carrito" className="cart-link-principal">
+          <FaShoppingCart className={`cart-icon-principal ${animarCarrito ? "animar" : ""}`} />
+          {totalCantidad > 0 && <span className="contador-carrito-principal">{totalCantidad}</span>}
           <span>Carrito</span>
         </Link>
 
         {user ? (
           <>
-            <span className="user-name">✨ {user.name?.split(" ")[0]}</span>
-            <button className="logout-btn" onClick={handleLogout}>Cerrar sesión</button>
+            <span className="user-name-principal">✨ {user.name?.split(" ")[0]}</span>
+            <button className="logout-btn-principal" onClick={handleLogout}>Cerrar sesión</button>
           </>
         ) : (
           <>
-            <Link to="/register" className="nav-link">Registro</Link>
-            <Link to="/login" className="nav-link">Login</Link>
+            <Link to="/register" className="nav-link-principal">Registro</Link>
+            <Link to="/login" className="nav-link-principal">Login</Link>
           </>
         )}
       </div>

@@ -1,0 +1,67 @@
+/* src/components/Recetas/SeccionDespedida.css */
+
+.seccion-despedida {
+    position: relative;
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #fdf4ff, #fff0f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .humo-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    z-index: 0;
+    animation: flotar 15s ease-in-out infinite;
+    pointer-events: none;
+    filter: blur(1px);
+  }
+  
+  @keyframes flotar {
+    0% { opacity: 0.08; transform: translateY(0); }
+    50% { opacity: 0.14; transform: translateY(-10px); }
+    100% { opacity: 0.08; transform: translateY(0); }
+  }
+  
+  .despedida-texto {
+    background: rgba(235, 177, 232, 0.414);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .despedida-texto h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9333ea;
+    margin-bottom: 1.5rem;
+  }
+  
+  .despedida-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4b2e57;
+  }
+  
+  .despedida-texto h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #6b21a8;
+    font-weight: 700;
+  }
+  
+  .marca {
+    font-style: italic;
+    color: #ec4899;
+    font-weight: bold;
+  }
+  

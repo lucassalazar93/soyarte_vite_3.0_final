@@ -1,4 +1,1 @@
-#!/bin/bash
-cd backend
-npm install
-npm start
+Eliminar archivo innecesario de inicio.sh

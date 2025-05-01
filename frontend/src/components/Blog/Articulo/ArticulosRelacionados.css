@@ -1,0 +1,75 @@
+.articulos-relacionados {
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff0f6;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.articulos-relacionados h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #a21caf;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tarjetas-horizontal {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.tarjeta-blog {
+  background: white;
+  border-radius: 1.5rem;
+  min-width: 280px;
+  max-width: 320px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.tarjeta-blog:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.imagen-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenido-blog {
+  padding: 1rem;
+}
+
+.contenido-blog h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #a21caf;
+  margin-bottom: 0.5rem;
+}
+
+.contenido-blog p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 0.8rem;
+}
+
+.link-leer {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #7e22ce;
+}

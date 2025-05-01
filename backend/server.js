@@ -1,4 +1,3 @@
-
 require("dotenv").config(); // ✅ 1. Variables de entorno
 
 // ✅ 2. Librerías
@@ -16,17 +15,20 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ 5. Crear carpeta para imágenes si no existe
-const imagenesPath = path.join(__dirname, "uploads", "imagenes-tienda");
-if (!fs.existsSync(imagenesPath)) {
-  fs.mkdirSync(imagenesPath, { recursive: true });
-  console.log("📁 Carpeta creada: uploads/imagenes-tienda");
-}
+// ✅ 5. Crear carpetas necesarias si no existen
+const carpetas = ["imagenes-tienda", "imagenes-blog"]; // CORREGIDO
+carpetas.forEach((folder) => {
+  const fullPath = path.join(__dirname, "uploads", folder);
+  if (!fs.existsSync(fullPath)) {
+    fs.mkdirSync(fullPath, { recursive: true });
+    console.log(`📁 Carpeta creada: uploads/${folder}`);
+  }
+});
 
 // ✅ 6. Archivos estáticos
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// ✅ 7. Rutas de API
+// ✅ 7. Importar rutas
 const adminRoutes             = require("./routes/admin.routes");
 const productosRoutes         = require("./routes/productos.routes");
 const recetasRoutes           = require("./routes/recetas.routes");
@@ -40,31 +42,31 @@ const gruposTiendaRoutes      = require("./routes/grupos.routes");
 const categoriasTiendaRoutes  = require("./routes/categorias.routes");
 const gruposRecetasRoutes     = require("./routes/gruposRecetas.routes");
 const categoriasRecetasRoutes = require("./routes/categoriasRecetas.routes");
-const utensiliosRoutes        = require("./routes/utensilios.routes"); // ✅ Ruta añadida
+const utensiliosRoutes        = require("./routes/utensilios.routes");
+const blogRoutes              = require("./routes/blog.routes");
+const comentariosRoutes       = require("./routes/comentarios.routes");
+const redSanadoraRoutes       = require("./routes/redSanadora.routes");
 
 // ✅ 8. Registrar rutas
-app.use("/api/admin",       adminRoutes);
-app.use("/api/productos",   productosRoutes);
-app.use("/api/recetas",     recetasRoutes);
-app.use("/api/diario",      diarioRoutes);
-app.use("/api",             loginRoutes);
-app.use("/api/ventas",      ventasRoutes);
-app.use("/api/resenas",     resenasRoutes);
-app.use("/api/ordenes",     ordenesRoutes);
-app.use("/api/usuarios",    usuariosRoutes);
-
-// ✅ Tienda
-app.use("/api/grupos",      gruposTiendaRoutes);
-app.use("/api/categorias",  categoriasTiendaRoutes);
-
-// ✅ Recetas (nuevas rutas específicas)
+app.use("/api/admin",              adminRoutes);
+app.use("/api/productos",          productosRoutes);
+app.use("/api/recetas",            recetasRoutes);
+app.use("/api/diario",             diarioRoutes);
+app.use("/api",                    loginRoutes);
+app.use("/api/ventas",             ventasRoutes);
+app.use("/api/resenas",            resenasRoutes);
+app.use("/api/ordenes",            ordenesRoutes);
+app.use("/api/usuarios",           usuariosRoutes);
+app.use("/api/grupos",             gruposTiendaRoutes);
+app.use("/api/categorias",         categoriasTiendaRoutes);
 app.use("/api/grupos/recetas",     gruposRecetasRoutes);
 app.use("/api/categorias/recetas", categoriasRecetasRoutes);
+app.use("/api/utensilios",         utensiliosRoutes);
+app.use("/api/blog",               blogRoutes);
+app.use("/api/comentarios-blog",   comentariosRoutes);
+app.use("/api/red-sanadora",       redSanadoraRoutes);
 
-// ✅ Utensilios
-app.use("/api/utensilios", utensiliosRoutes); // 🧪 Aquí se activa correctamente la ruta
-
-// ✅ 9. Verificar conexión
+// ✅ 9. Verificar conexión a base de datos
 async function verificarConexion() {
   try {
     await db.query("SELECT 1");
@@ -76,7 +78,7 @@ async function verificarConexion() {
 }
 verificarConexion();
 
-// ✅ 10. Ruta de prueba
+// ✅ 10. Ruta de prueba raíz
 app.get("/", (req, res) => {
   res.send("🚀 ¡Servidor funcionando correctamente!");
 });
@@ -84,5 +86,5 @@ app.get("/", (req, res) => {
 // ✅ 11. Iniciar servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`🚀 Servidor corriendo en: http://localhost:${PORT}`);
 });

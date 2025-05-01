@@ -1,0 +1,63 @@
+.historias-reflexiones-seccion {
+    padding: 3rem 2rem;
+    background-color: #fff0f6;
+    text-align: center;
+  }
+  
+  .titulo-seccion {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #a21caf;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .tarjeta-hover-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .tarjeta {
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+    text-align: left;
+    cursor: default;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .tarjeta-hover-container:hover .tarjeta {
+    transform: scale(1.03);
+  }
+  
+  .tooltip-flotante {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+  }
+  
+  .tarjeta-hover-container:hover .tooltip-flotante {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  

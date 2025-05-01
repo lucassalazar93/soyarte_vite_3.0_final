@@ -1,0 +1,105 @@
+/* src/components/Blog/GaleriaEntradas.css */
+
+.galeria-entradas {
+  padding: 4rem 2rem;
+  background-color: #fff0f5;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.titulo-galeria {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #a21caf;
+  font-family: 'Playfair Display', serif;
+}
+
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-entrada {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(160, 0, 160, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.tarjeta-entrada:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(160, 0, 160, 0.25);
+}
+
+.categoria-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #a21caf;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.imagen-tarjeta {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-entrada:hover .imagen-tarjeta {
+  transform: scale(1.05);
+}
+
+.contenido-tarjeta {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.titulo-tarjeta {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #a21caf;
+}
+
+.resumen-tarjeta {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  min-height: 80px;
+}
+
+.boton-leer-mas {
+  display: inline-block;
+  background-color: #a21caf;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-leer-mas:hover {
+  background-color: #86198f;
+  transform: scale(1.05);
+}
+
+.mensaje-vacio {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #888;
+  margin-top: 3rem;
+}

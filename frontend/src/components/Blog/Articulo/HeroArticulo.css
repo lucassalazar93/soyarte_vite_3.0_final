@@ -1,0 +1,67 @@
+/* src/components/blog/HeroArticulo.css */
+
+/* Contenedor principal */
+.hero-articulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem 2rem 1rem; /* ✅ Menos padding arriba */
+    background-color: #fff1f9;
+  }
+  
+  
+  /* Imagen destacada */
+  .articulo-imagen {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título principal */
+  .articulo-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #a21caf;
+    margin-bottom: 1rem;
+  }
+  
+  /* Introducción / resumen */
+  .articulo-introduccion {
+    color: #6b7280;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .articulo-titulo {
+      font-size: 2rem;
+    }
+  
+    .articulo-introduccion {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .articulo-imagen {
+      border-radius: 0.8rem;
+    }
+  
+    .articulo-titulo {
+      font-size: 1.8rem;
+    }
+  
+    .articulo-introduccion {
+      font-size: 0.95rem;
+    }
+  }
+  

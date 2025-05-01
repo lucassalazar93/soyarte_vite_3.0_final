@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&family=Dancing+Script&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.7;
+  background-color: #fff1f9;
+  margin: 0;
+}
+
+/* ==============================
+   🎨 ESTRUCTURA GENERAL DEL ARTÍCULO
+================================= */
+
+.articulo-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background: #fff1f9;
+}
+
+.articulo-contenido {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* ==============================
+   📖 CONTENIDO IZQUIERDO
+================================= */
+
+.articulo-izquierda {
+  width: 70%;
+  padding-right: 2rem;
+}
+
+.articulo-imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  max-height: 600px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.articulo-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #a21caf;
+  margin-bottom: 1rem;
+}
+
+.articulo-introduccion {
+  color: #6b7280;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.articulo-cuerpo h2 {
+  font-size: 1.8rem;
+  color: #4b5563;
+}
+
+.articulo-cuerpo p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* ==============================
+   ➡️ ASIDE DERECHO
+================================= */
+
+.articulo-derecha {
+  width: 20%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Foto del autor */
+.autor-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foto-autor {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.foto-autor:hover {
+  transform: scale(1.05);
+}
+
+.autor-nombre {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #a21caf;
+  margin-top: 0.5rem;
+}
+
+/* Historia del autor */
+.historia-autor {
+  text-align: center;
+  font-size: 1rem;
+  color: #4b5563;
+  padding: 0 1rem;
+}
+
+.historia-cita {
+  font-style: italic;
+  margin-top: 1rem;
+  color: #6b7280;
+  max-width: 300px;
+}
+
+/* Firma */
+.firma-autor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firma-imagen {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==============================
+   📬 SUSCRIPCIÓN / FORMULARIO
+================================= */
+
+.formulario-suscripcion {
+  text-align: center;
+  width: 100%;
+}
+
+.input-suscripcion {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.btn-suscripcion {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #a21caf;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-suscripcion:hover {
+  background-color: #86198f;
+}
+
+/* ==============================
+   📚 LO MÁS LEÍDO
+================================= */
+
+.lo-mas-leido h2 {
+  font-size: 1.5rem;
+  color: #a21caf;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-card {
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   🎥 VIDEO
+================================= */
+
+.video-relacionado {
+  width: 100%;
+  margin-top: 3rem;
+  background: #fef6fb;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.video-relacionado:hover {
+  transform: scale(1.01);
+}
+
+.video-relacionado h3 {
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  color: #a21caf;
+  margin-bottom: 1.5rem;
+}
+
+.iframe-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.iframe-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  border-radius: 12px;
+}
+
+/* ==============================
+   💌 CARTA FINAL
+================================= */
+
+.carta-final {
+  background-color: #fef6fb;
+  border-left: 5px solid #f34ff3;
+  padding: 2.5rem 10%;
+  margin: 5rem 0 3rem 0;
+  border-radius: 12px;
+  font-style: italic;
+  color: #374151;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+
+.carta-final h3 {
+  color: #a21caf;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.5rem;
+}
+
+.firma-nore {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  color: #6b21a8;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* ==============================
+   📱 RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .articulo-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .articulo-izquierda,
+  .articulo-derecha {
+    width: 100%;
+    padding: 0;
+  }
+
+  .foto-autor {
+    width: 90px;
+    height: 90px;
+  }
+
+  .firma-imagen {
+    width: 80px;
+  }
+
+  .carta-final {
+    padding: 2rem 1.2rem;
+  }
+}
+
+/* ANIMACIÓN ENTRADA */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

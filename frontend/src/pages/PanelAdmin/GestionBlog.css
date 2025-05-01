@@ -1,0 +1,167 @@
+/* src/pages/PanelAdmin/GestionBlog.css */
+
+.gestion-blog-panel {
+  padding: 2rem;
+  background-color: #fff8fc;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.gestion-blog-panel h2 {
+  font-size: 2.4rem;
+  color: #a21caf;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.acciones-blog {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.acciones-blog button {
+  background: linear-gradient(to right, #ec4899, #a21caf);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.acciones-blog button:hover {
+  background: linear-gradient(to right, #a21caf, #ec4899);
+  transform: translateY(-2px);
+}
+
+.filtros-contenedor {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.filtros-contenedor input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.filtros-contenedor input:focus {
+  border-color: #a21caf;
+}
+
+.tabla-blog {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabla-blog th,
+.tabla-blog td {
+  padding: 0.9rem;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+.tabla-blog th {
+  background-color: #ffe6f4;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.tabla-blog td {
+  color: #4b5563;
+}
+
+.tabla-blog tr:hover {
+  background-color: #fdf4ff;
+  transition: background-color 0.3s ease;
+}
+
+.preview-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preview-audio {
+  width: 160px;
+}
+
+.blog-modal-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.blog-modal-acciones button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.blog-modal-acciones button:first-child {
+  background: #a21caf;
+  color: white;
+}
+
+.blog-modal-acciones button:first-child:hover {
+  background: #86198f;
+  transform: scale(1.03);
+}
+
+.blog-modal-acciones button:last-child {
+  background: #f43f5e;
+  color: white;
+}
+
+.blog-modal-acciones button:last-child:hover {
+  background: #e11d48;
+  transform: scale(1.03);
+}
+
+audio {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .tabla-blog th,
+  .tabla-blog td {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .preview-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .preview-audio {
+    width: 120px;
+  }
+
+  .filtros-contenedor input {
+    width: 90%;
+  }
+}

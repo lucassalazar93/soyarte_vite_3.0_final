@@ -1,0 +1,13 @@
+.frase-inspiradora {
+    background: #fff5fb;
+    border-left: 5px solid #a21caf;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    color: #6b7280;
+    font-style: italic;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  

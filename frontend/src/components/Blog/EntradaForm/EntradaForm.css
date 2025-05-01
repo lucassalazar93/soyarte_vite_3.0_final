@@ -1,0 +1,89 @@
+/* src/components/Blog/EntradaForm.css */
+
+.entrada-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.entrada-modal-contenido {
+  background: #fff0f6;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.entrada-modal-contenido h3 {
+  text-align: center;
+  color: #a21caf;
+  margin-bottom: 1rem;
+}
+
+.entrada-form input,
+.entrada-form textarea,
+.entrada-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+}
+
+.sun-editor {
+  margin-bottom: 1rem;
+}
+
+.preview-imagen-contenedor {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.preview-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* 🔥 Agregado para previsualizar audio/música */
+.preview-audio-contenedor, .preview-music-contenedor {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.preview-audio {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+.entrada-modal-acciones {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.entrada-modal-acciones button {
+  background-color: #a21caf;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.entrada-modal-acciones button:hover {
+  background-color: #86198f;
+}

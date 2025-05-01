@@ -1,0 +1,127 @@
+/* VistaRedSanadora.css */
+
+.vista-red-sanadora {
+    padding: 3rem 2rem;
+    background-color: #fff1f9;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .vista-red-sanadora h2 {
+    font-size: 2rem;
+    color: #a21caf;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filtro-red {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filtro-red input {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+  }
+  
+  .filtro-red input:focus {
+    outline: none;
+    border-color: #a21caf;
+  }
+  
+  .tabla-red {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tabla-red th,
+  .tabla-red td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .tabla-red th {
+    background-color: #fce7f3;
+    color: #a21caf;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .tabla-red td {
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+  
+  .tabla-red tbody tr:hover {
+    background-color: #fdf4ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .no-datos {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 2rem 0;
+  }
+  
+  /* 🎨 Estados de seguimiento */
+  .estado {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 160px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Colores por estado */
+  .estado.pendiente {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .estado.en-proceso {
+    background: #e0f2fe;
+    color: #0369a1;
+  }
+  
+  .estado.contactado {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .estado.finalizado {
+    background: #e9d5ff;
+    color: #6b21a8;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .tabla-red th,
+    .tabla-red td {
+      font-size: 0.85rem;
+      padding: 0.75rem;
+    }
+  
+    .estado {
+      font-size: 0.85rem;
+    }
+  
+    .filtro-red input {
+      width: 90%;
+    }
+  }
+  

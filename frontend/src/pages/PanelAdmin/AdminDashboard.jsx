@@ -82,13 +82,10 @@ const AdminDashboard = () => {
             <i className="fas fa-utensils"></i>
             <span>Recetas (Admin)</span>
           </Link>
-
-          {/* 🔥 Nuevo botón para agregar receta
-          <Link to="/admin/recetas/nueva" className="admin-card special">
-            <i className="fas fa-plus-circle"></i>
-            <span>Agregar Receta</span>
-          </Link>*/}
-
+          <Link to="/admin/blog" className="admin-card">
+            <i className="fas fa-pen-fancy"></i>
+            <span>Blog (Admin)</span>
+          </Link>
           <Link to="/admin/terapia" className="admin-card">
             <i className="fas fa-heart"></i>
             <span>Terapia Culinaria</span>
@@ -100,6 +97,15 @@ const AdminDashboard = () => {
           <Link to="/admin/promociones" className="admin-card">
             <i className="fas fa-tags"></i>
             <span>Promociones</span>
+          </Link>
+          <Link to="/admin/comentarios" className="admin-card">
+            <i className="fas fa-comments"></i>
+            <span>Comentarios del Blog</span>
+          </Link>
+          {/* 🌿 NUEVO BOTÓN */}
+          <Link to="/admin/red-sanadora" className="admin-card">
+            <i className="fas fa-hand-holding-heart"></i>
+            <span>Red Sanadora</span>
           </Link>
         </div>
       </div>

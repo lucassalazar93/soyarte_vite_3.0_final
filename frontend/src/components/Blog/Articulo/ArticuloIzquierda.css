@@ -1,0 +1,115 @@
+/* src/components/blog/ArticuloIzquierda.css */
+
+.articulo-izquierda {
+    width: 70%;
+    padding-right: 2rem;
+  }
+  
+  .articulo-imagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    max-height: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articulo-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #a21caf;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .articulo-introduccion {
+    color: #6b7280;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .articulo-pregunta h2 {
+    font-size: 2rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .articulo-cuerpo p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 2rem;
+  }
+  
+  .articulo-audio-musica-swiper {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .articulo-audio-musica-swiper h3 {
+    margin-bottom: 1rem;
+    color: #6b7280;
+  }
+  
+  .articulo-audio-musica-swiper audio {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #e9d5ec; /* borde lavanda */
+  }
+  
+  .articulo-historia, .reflexion-profunda {
+    background: #fff0f6;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .historia-box, .reflexion-box {
+    margin-top: 1.5rem;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    transition: transform 0.3s ease;
+  }
+  
+  .historia-box:hover, .reflexion-box:hover {
+    transform: scale(1.02);
+  }
+  
+  .articulo-youtube {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  

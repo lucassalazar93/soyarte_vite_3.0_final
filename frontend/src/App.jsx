@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// 🌐 Layout general
+// Layout general
 import Navbar from "./components/Navbar/Navbar";
 import NavbarTienda from "./components/Navbar/NavbarTienda";
 import NavbarRecetas from "./components/Navbar/NavbarRecetas";
@@ -11,30 +11,31 @@ import Footer from "./components/Footer/Footer";
 import SocialFloating from "./components/SocialFloating/SocialFloating";
 import Munequita from "./components/UI/Munequita";
 
-// 🏠 Páginas públicas
+// Páginas públicas
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Recuperar from "./pages/Recuperar";
 import BlogPage from "./pages/BlogPage";
+import Articulo from "./pages/Articulo";
 
-// 🛍️ Tienda
+// Tienda
 import Tienda from "./pages/Tienda";
 import Coleccion from "./pages/Coleccion";
 import ColeccionOferta from "./pages/ColeccionOferta";
 import ColeccionGrupo from "./pages/ColeccionGrupo";
 import ProductoDetalle from "./pages/ProductoDetalle";
 
-// 🛒 Carrito
+// Carrito
 import Carrito from "./components/Carrito/Carrito";
 import Checkout from "./components/Carrito/Checkout";
 import CheckoutGracias from "./pages/CheckoutGracias";
 
-// 👩 Mujeres
+// Mujeres
 import MujeresInspiran from "./components/Mujeres/MujeresInspiran";
 import MujerDetalle from "./components/Mujeres/MujerDetalle";
 
-// 🍽️ Recetas
+// Recetas
 import RecetasPage from "./pages/Recetas/RecetasPage";
 import RecetaDetalle from "./pages/Recetas/RecetaDetalle";
 import RecetasCocinadas from "./pages/Recetas/RecetasCocinadas";
@@ -42,12 +43,12 @@ import MiRecetario from "./pages/Recetas/MiRecetario";
 import ColeccionCategoria from "./pages/Recetas/ColeccionCategoria";
 import BienvenidaRecetas from "./pages/Recetas/BienvenidaRecetas";
 
-// 🧘 Terapia
+// Terapia
 import TerapiaCulinaria from "./pages/TerapiaCulinaria/TerapiaCulinaria";
 import RecetasSanadorasPage from "./pages/TerapiaCulinaria/RecetasSanadorasPage";
 import DiarioCulinario from "./pages/TerapiaCulinaria/DiarioCulinario";
 
-// 🔐 Admin
+// Admin
 import AdminDashboard from "./pages/PanelAdmin/AdminDashboard";
 import VistaInventario from "./pages/PanelAdmin/VistaInventario";
 import VistaUsuarios from "./pages/PanelAdmin/VistaUsuarios";
@@ -56,8 +57,11 @@ import VistaRecetas from "./pages/Recetas/AdminRecetas/VistaRecetas";
 import AgregarRecetaGeneral from "./pages/Recetas/AdminRecetas/AgregarRecetaGeneral";
 import EditarRecetaGeneral from "./pages/Recetas/AdminRecetas/EditarRecetaGeneral";
 import AgregarRecetaTerapia from "./pages/AdminTerapia/AgregarRecetaTerapia";
+import GestionBlog from "./pages/PanelAdmin/GestionBlog";
+import GestionComentarios from "./pages/PanelAdmin/GestionComentarios";
+import VistaRedSanadora from "./pages/PanelAdmin/VistaRedSanadora"; // ✅ NUEVA IMPORTACIÓN
 
-// 🔒 Rutas protegidas
+// Rutas protegidas
 import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
@@ -67,13 +71,9 @@ function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // 🔒 Ocultar navbar y footer en login y register
   const ocultarLayout = ["/login", "/register"].includes(location.pathname);
-
-  // 🎨 Navbar especial de tienda
   const esTienda = location.pathname.startsWith("/tienda");
 
-  // 🍽️ Navbar especial para recetas
   const esRutaRecetas =
     location.pathname.startsWith("/recetas") ||
     location.pathname.startsWith("/mi-recetario") ||
@@ -82,7 +82,7 @@ function App() {
 
   return (
     <>
-      {/* ✅ Mostrar navbar según contexto */}
+      {/* NAVBAR DINÁMICO */}
       {!ocultarLayout &&
         (esRutaRecetas ? (
           <NavbarRecetas />
@@ -96,18 +96,19 @@ function App() {
       {!ocultarLayout && <Munequita />}
 
       <Routes>
-        {/* 🌐 Públicas */}
+        {/* Públicas */}
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<Articulo />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/recuperar" element={<Recuperar />} />
 
-        {/* 👩 Mujeres */}
+        {/* Mujeres */}
         <Route path="/mujeres" element={<MujeresInspiran />} />
         <Route path="/mujeres/:id" element={<MujerDetalle />} />
 
-        {/* 🍽️ Recetas */}
+        {/* Recetas */}
         <Route path="/bienvenida-recetas" element={<BienvenidaRecetas />} />
         <Route path="/recetas" element={<RecetasPage />} />
         <Route path="/recetas/:id" element={<RecetaDetalle />} />
@@ -122,19 +123,19 @@ function App() {
           }
         />
 
-        {/* 🛍️ Tienda */}
+        {/* Tienda */}
         <Route path="/tienda" element={<Tienda />} />
         <Route path="/coleccion" element={<Coleccion />} />
         <Route path="/coleccion-oferta/:categoria" element={<ColeccionOferta />} />
         <Route path="/coleccion/:grupo" element={<ColeccionGrupo />} />
         <Route path="/producto/:id" element={<ProductoDetalle />} />
 
-        {/* 🛒 Carrito */}
+        {/* Carrito */}
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/gracias" element={<CheckoutGracias />} />
 
-        {/* 🧘 Terapia */}
+        {/* Terapia */}
         <Route path="/terapia-culinaria" element={<TerapiaCulinaria />} />
         <Route path="/terapia-culinaria/recetas" element={<RecetasSanadorasPage />} />
         <Route
@@ -146,7 +147,7 @@ function App() {
           }
         />
 
-        {/* 🛠️ Admin */}
+        {/* Admin */}
         <Route
           path="/admin"
           element={
@@ -211,9 +212,32 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/admin/blog"
+          element={
+            <PrivateRoute roles={["admin"]}>
+              <GestionBlog />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/comentarios"
+          element={
+            <PrivateRoute roles={["admin"]}>
+              <GestionComentarios />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/red-sanadora"
+          element={
+            <PrivateRoute roles={["admin"]}>
+              <VistaRedSanadora />
+            </PrivateRoute>
+          }
+        />
       </Routes>
 
-      {/* ✅ Footer si aplica */}
       {!ocultarLayout && <Footer />}
     </>
   );

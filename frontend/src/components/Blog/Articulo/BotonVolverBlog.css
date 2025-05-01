@@ -1,0 +1,19 @@
+.boton-volver-blog {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #a21caf;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background 0.3s;
+    z-index: 1000;
+  }
+  
+  .boton-volver-blog:hover {
+    background: #86198f;
+  }
+  

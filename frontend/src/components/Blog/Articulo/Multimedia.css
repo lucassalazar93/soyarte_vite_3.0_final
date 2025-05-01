@@ -1,0 +1,50 @@
+.multimedia-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 0 1rem;
+  }
+  
+  .audio-card {
+    background: linear-gradient(145deg, #fff0f8, #fff8fc);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.2s ease;
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .audio-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .audio-card h4 {
+    font-size: 1.3rem;
+    font-family: 'Playfair Display', serif;
+    color: #a21caf;
+    margin-bottom: 12px;
+  }
+  
+  .audio-card .emoji {
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+  
+  .audio-card audio {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #f7e2f0;
+    margin-bottom: 10px;
+  }
+  
+  .mensaje-extra {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+  

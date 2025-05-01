@@ -1,13 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,         // ✔️ Permite que puedas acceder desde otro dispositivo (por IP local)
-    port: 5173,         // ✔️ Puerto por defecto para Vite
-    hmr: {
-      overlay: true,    // ✔️ Muestra errores directamente en el navegador
-    },
+    host: true, // Esto permite conexiones externas
+    allowedHosts: [
+      'a2be-190-69-32-61.ngrok-free.app', // Agrega aquí tu URL pública de ngrok
+    ],
   },
-})
+});
